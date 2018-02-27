@@ -11,8 +11,13 @@
  + Manager should know which agents are currently free.
 
 **Use case diagram**
-![Alt-текст](use case.png "Class ")
+![Alt-текст](use case.png "use case")
 
 **Class diagram**
 
 ![Alt-текст](class.png "Class ")
+
+**Some draft of UI**
+![Alt-текст](Agent constructor.png "")
+![Alt-текст](Grover 'Golden Teeth' Poole.png "")
+![Alt-текст](Mission constructor.png "")
