@@ -11,6 +11,8 @@
  + Manager should know which agents are currently free.
 
 **Use case diagram**
-![Alt-текст](class.png "Class ")
+![Alt-текст](use case.png "Class ")
 
 **Class diagram**
+
+![Alt-текст](class.png "Class ")
