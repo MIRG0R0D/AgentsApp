@@ -18,6 +18,7 @@
 ![Alt-текст](class.png "Class ")
 
 **Some draft of UI**
+
 ![Alt-текст](Agent constructor.png "")
-![Alt-текст](Grover 'Golden Teeth' Poole.png "")
+![Alt-текст](Grover Poole.png "")
 ![Alt-текст](Mission constructor.png "")
