@@ -9,18 +9,12 @@ import java.util.List;
 
 public interface AgentManager {
     
+    void create(Agent agent) throws ServiceFailureException, ValidationException, IllegalEntityException;
 
-    void createPhoto(Agent photo) throws ServiceFailureException, ValidationException, IllegalEntityException;
-
-    Agent getPhoto(Long id) throws ServiceFailureException;
+    Agent findAgentById(Long id) throws ServiceFailureException;
     
-
-    void updatePhoto(Agent photo) throws ServiceFailureException, ValidationException, IllegalEntityException;
+    void update(Agent agent) throws ServiceFailureException, ValidationException, IllegalEntityException;
     
-
-    void deletePhoto(Agent photo) throws ServiceFailureException, IllegalEntityException;
-    
-
-    List<Agent> findAllPhotos() throws ServiceFailureException;
+    List<Agent> findAllAgents() throws ServiceFailureException;
     
 }
