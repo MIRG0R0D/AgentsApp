@@ -9,20 +9,14 @@ import java.util.List;
 public interface MissionManager {
     
 
-    void createAlbum(Mission album) throws ServiceFailureException, ValidationException, IllegalEntityException;
+    void createMission(Mission mis) throws ServiceFailureException, ValidationException, IllegalEntityException;
     
-
-    Mission getAlbum(Long id) throws ServiceFailureException;
+        
+    void updateMission(Mission mis) throws ServiceFailureException, ValidationException, IllegalEntityException;
     
-
-    void udateBody(Mission album) throws ServiceFailureException, ValidationException, IllegalEntityException;
+    List <Mission> getMissions ();
     
-
-    void deleteAlbum(Mission album) throws ServiceFailureException, IllegalEntityException;
+    List <Mission> getUncompletedMissions ();
     
-
-    List<Mission> findAllAlbums() throws ServiceFailureException;
-
-    Mission findAlbumByName(String name) throws ServiceFailureException;
-    
+    Mission getMission(Long id) throws ServiceFailureException;
 }
