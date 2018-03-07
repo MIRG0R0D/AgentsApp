@@ -5,11 +5,11 @@ import java.util.List;
 
 public interface AgentManager {
     
-    void create(Agent agent) ;
+    Long create(Agent agent) ;
 
     Agent findAgentById(Long id);
     
-    void update(Agent agent);
+    void update(Long id, Agent agent);
     
     List<Agent> findAllAgents();
     
