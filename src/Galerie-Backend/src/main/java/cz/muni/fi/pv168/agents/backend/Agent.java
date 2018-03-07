@@ -73,10 +73,6 @@ public class Agent {
             return false;
         }
         
-//      //  
-//        if (!Objects.equals(this.id, other.id)) {
-//            return false;
-//        }
 
         if (!Objects.equals(this.born, other.born)) {
             return false;

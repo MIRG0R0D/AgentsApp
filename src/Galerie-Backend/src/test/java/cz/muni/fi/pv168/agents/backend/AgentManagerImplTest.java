@@ -64,11 +64,11 @@ public class AgentManagerImplTest {
      */
     @Test
     public void testCreate() {
-        Agent bond = JamesBond();
-        Agent stierlitz  = vonStierlitz();
-        assertTrue (!bond.getId().equals("null"));
-        assertTrue (!stierlitz.getId().equals("null"));
-        assertTrue (bond.hashCode() != stierlitz.hashCode());
+        Long bondId = manager.create(JamesBond());
+        Long stierId = manager.create(vonStierlitz());
+        assertFalse (bondId.equals("null"));
+        assertFalse (stierId.equals("null"));
+        assertTrue (bondId != stierId);
         
     }
 
@@ -78,7 +78,7 @@ public class AgentManagerImplTest {
     @Test
     public void testFindAgentById() {
         Agent bond = JamesBond();
-        Long id = manager.create(bond);
+        Long id = manager.create(JamesBond());
         
         
         assertEquals(manager.findAgentById(id), bond);
@@ -91,7 +91,7 @@ public class AgentManagerImplTest {
     @Test
     public void testUpdate() {
          Agent stierlitz  = vonStierlitz();
-         Long id = manager.create(stierlitz);
+         Long id = manager.create(vonStierlitz());
          String newName = "Vsevolod";
          stierlitz.setName(newName);
          manager.update(id, stierlitz);
@@ -104,11 +104,11 @@ public class AgentManagerImplTest {
      */
     @Test
     public void testFindAllAgents() {
-        System.out.println("findAllAgents");
         
         Agent bond = JamesBond();
         Agent stierlitz  = vonStierlitz();
-        
+        manager.create(bond);
+        manager.create(stierlitz);
         
         List<Agent> result = manager.findAllAgents();
         
