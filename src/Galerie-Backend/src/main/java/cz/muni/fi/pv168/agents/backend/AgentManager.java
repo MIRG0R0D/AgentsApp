@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface AgentManager {
     
-    void create(Agent agent123) ;
+    void create(Agent agent) ;
 
     Agent findAgentById(Long id);
     

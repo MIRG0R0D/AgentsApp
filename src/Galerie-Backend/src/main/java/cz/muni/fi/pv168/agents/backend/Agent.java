@@ -16,6 +16,11 @@ public class Agent {
         this.level = level;
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        return "Agent{" + "id=" + id + ", born=" + born + ", level=" + level + ", name=" + name + '}';
+    }
     
 
 }
