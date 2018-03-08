@@ -8,24 +8,44 @@ import java.util.List;
 
 public class SecretManagerImpl implements SecretManager {
 
-
+    /**
+     * finding some mission with the certain agent
+     * @param agent agent on mission
+     * @return mission with the agent
+     */
     @Override
-    public Agent findAlbumWithPhoto(Agent body) throws ServiceFailureException, IllegalEntityException {
-        return null;
+    public Mission findMissionWithAgent(Agent agent) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    /**
+     * finding agents on the certain mission
+     * @param mission mission with agents
+     * @return list of agents on the mission
+     */
     @Override
-    public List<Agent> findPhotosInAlbum(Mission album) throws ServiceFailureException, IllegalEntityException {
-        return null;
+    public List<Agent> findAgentsWithMission(Mission mission) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    /**
+     * adding new agent for the mission
+     * @param agent new agent for the mission
+     * @param mission the mission itself
+     */
     @Override
-    public void addPhotoToAlbum(Agent photo, Mission album) throws ServiceFailureException, IllegalEntityException {
-
+    public void attachAgentToMission(Agent agent, Mission mission) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    /**
+     * finishing the mission
+     * @param mission mission to be finished
+     */
     @Override
-    public void removePhotoFromAlbum(Agent photo, Mission album) throws ServiceFailureException, IllegalEntityException {
-
+    public void finishTheMission(Mission mission) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+
 }

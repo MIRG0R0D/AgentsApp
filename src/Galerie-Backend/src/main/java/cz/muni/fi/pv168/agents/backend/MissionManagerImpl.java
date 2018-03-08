@@ -9,34 +9,30 @@ import java.util.List;
 
 public class MissionManagerImpl implements MissionManager {
 
-
     @Override
-    public void createAlbum(Mission album) throws ServiceFailureException, ValidationException, IllegalEntityException {
-
+    public void createMission(Mission mis) throws ServiceFailureException, ValidationException, IllegalEntityException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Mission getAlbum(Long id) throws ServiceFailureException {
-        return null;
+    public void updateMission(Mission mis) throws ServiceFailureException, ValidationException, IllegalEntityException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void udateBody(Mission album) throws ServiceFailureException, ValidationException, IllegalEntityException {
-
+    public List<Mission> getMissions() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void deleteAlbum(Mission album) throws ServiceFailureException, IllegalEntityException {
-
+    public List<Mission> getUncompletedMissions() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public List<Mission> findAllAlbums() throws ServiceFailureException {
-        return null;
+    public Mission getMission(Long id) throws ServiceFailureException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public Mission findAlbumByName(String name) throws ServiceFailureException {
-        return null;
-    }
+
 }

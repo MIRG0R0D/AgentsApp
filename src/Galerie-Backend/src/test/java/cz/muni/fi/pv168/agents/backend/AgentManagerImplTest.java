@@ -37,7 +37,7 @@ public class AgentManagerImplTest {
     @Before
     public void setUp() {
          
-        manager = new AgentManagerImpl();
+        //manager = new AgentManagerImpl();
     }
     
     @After
@@ -64,6 +64,7 @@ public class AgentManagerImplTest {
      */
     @Test
     public void testCreate() {
+        manager = new AgentManagerImpl();
         Long bondId = manager.create(JamesBond());
         Long stierId = manager.create(vonStierlitz());
         assertFalse (bondId.equals("null"));
@@ -77,6 +78,7 @@ public class AgentManagerImplTest {
      */
     @Test
     public void testFindAgentById() {
+        manager = new AgentManagerImpl();
         Agent bond = JamesBond();
         Long id = manager.create(JamesBond());
         
@@ -90,12 +92,13 @@ public class AgentManagerImplTest {
      */
     @Test
     public void testUpdate() {
-         Agent stierlitz  = vonStierlitz();
-         Long id = manager.create(vonStierlitz());
-         String newName = "Vsevolod";
-         stierlitz.setName(newName);
-         manager.update(id, stierlitz);
-         assertEquals(manager.findAgentById(id).getName(),newName);
+        manager = new AgentManagerImpl();
+        Agent stierlitz  = vonStierlitz();
+        Long id = manager.create(vonStierlitz());
+        String newName = "Vsevolod";
+        stierlitz.setName(newName);
+        manager.update(id, stierlitz);
+        assertEquals(manager.findAgentById(id).getName(),newName);
          
     }
 
@@ -104,18 +107,18 @@ public class AgentManagerImplTest {
      */
     @Test
     public void testFindAllAgents() {
-        
+        manager = new AgentManagerImpl();
         Agent bond = JamesBond();
         Agent stierlitz  = vonStierlitz();
-        manager.create(bond);
-        manager.create(stierlitz);
+        Long bondID = manager.create(bond);
+        Long stierId = manager.create(stierlitz);
         
         List<Agent> result = manager.findAllAgents();
         
         assertTrue(result.size()==2);
         assertTrue(result.contains(stierlitz));
         assertTrue(result.contains(bond));
-        
+        assertTrue(bondId != stierId);
     }
     
 }

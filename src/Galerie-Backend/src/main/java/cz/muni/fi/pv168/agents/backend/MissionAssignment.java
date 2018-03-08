@@ -13,25 +13,19 @@ import java.util.Objects;
  * @author xdovgan
  */
 public class MissionAssignment {
-    private Long id;
-    private Mission mission;
+    private final Long id;
     private List <Agent> agents;
 
+    public MissionAssignment(Long id, List<Agent> agents) {
+        this.id = id;
+        this.agents = agents;
+    }
+
+    
     public Long getId() {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Mission getMission() {
-        return mission;
-    }
-
-    public void setMission(Mission mission) {
-        this.mission = mission;
-    }
 
     public List<Agent> getAgents() {
         return agents;
@@ -43,7 +37,7 @@ public class MissionAssignment {
 
     @Override
     public String toString() {
-        return "MissionAssignment{" + "id=" + id + ", mission=" + mission + ", agents=" + agents + '}';
+        return "MissionAssignment{" + "id=" + id + ", agents=" + agents + '}';
     }
 
 
