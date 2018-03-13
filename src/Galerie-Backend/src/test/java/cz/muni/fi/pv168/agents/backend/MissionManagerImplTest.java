@@ -5,6 +5,8 @@
  */
 package cz.muni.fi.pv168.agents.backend;
 
+import org.hamcrest.CoreMatchers;
+import org.hamcrest.Matchers;
 import org.junit.*;
 
 import java.time.LocalDate;
@@ -42,7 +44,7 @@ public class MissionManagerImplTest {
     public void tearDown() {
     }
 
-    private Mission KillTerrorists(){
+    private Mission killTerrorists(){
         return new MissionBuilder()
                 .setCodeName("killingspree")
                 .setDescription("Kill them all")
@@ -69,7 +71,7 @@ public class MissionManagerImplTest {
     @Test
     public void testCreate() {
         manager = new MissionManagerImpl();
-        Long terroristId = manager.createMission(KillTerrorists());
+        Long terroristId = manager.createMission(killTerrorists());
         Long spdId = manager.createMission(InfiltrateSPD());
         assertFalse (terroristId.equals("null"));
         assertFalse (spdId.equals("null"));
@@ -96,7 +98,7 @@ public class MissionManagerImplTest {
     @Test
     public void testUpdate() {
         manager = new MissionManagerImpl();
-        Long terroristId = manager.createMission(KillTerrorists());
+        Long terroristId = manager.createMission(killTerrorists());
         Mission mission = manager.getMission(terroristId);
         String newCodeName = "NewName";
         mission.setCodeName(newCodeName);
@@ -110,7 +112,7 @@ public class MissionManagerImplTest {
     @Test
     public void testFindAllUncompletedMissions() {
         manager = new MissionManagerImpl();
-        Mission terroristMission = KillTerrorists();
+        Mission terroristMission = killTerrorists();
         Mission spdMission = InfiltrateSPD();
         manager.createMission(terroristMission);
         manager.createMission(spdMission);
@@ -128,7 +130,7 @@ public class MissionManagerImplTest {
     @Test
     public void testFindAllMission() {
         manager = new MissionManagerImpl();
-        Mission terroristMission = KillTerrorists();
+        Mission terroristMission = killTerrorists();
         Mission spdMission = InfiltrateSPD();
         Long terroristId = manager.createMission(terroristMission);
         Long spdId = manager.createMission(spdMission);
@@ -136,6 +138,13 @@ public class MissionManagerImplTest {
         List<Mission> result = manager.getMissions();
 
         assertTrue(result.size()==2);
+        assertThat(result, Matchers.hasSize(2));
+
+        assertThat("asldkfjasldkfjaslkdfj", CoreMatchers.allOf(
+                CoreMatchers.containsString("jkl"),
+                CoreMatchers.startsWith("a")
+        ));
+
         assertTrue(result.contains(terroristMission));
         assertTrue(result.contains(spdMission));
         assertTrue(terroristId != spdId);
