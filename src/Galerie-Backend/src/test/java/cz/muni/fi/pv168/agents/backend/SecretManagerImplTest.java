@@ -111,7 +111,7 @@ public class SecretManagerImplTest {
     public void testAttachAgentToMission() {
         manager = new SecretManagerImpl();
         Agent agent = English();
-        Mission mission = InfiltrateSPD()
+        Mission mission = InfiltrateSPD();
         manager.attachAgentToMission(agent, mission);
     }
 
@@ -120,17 +120,14 @@ public class SecretManagerImplTest {
      */
     @Test
     public void testFinishTheMission() {
-        
+        MissionManagerImpl missionManager = new MissionManagerImpl();
         manager = new SecretManagerImpl();
         Agent agent = English();
-        Mission mission = InfiltrateSPD()
+        Mission mission = InfiltrateSPD();
         manager.attachAgentToMission(agent, mission);
-        
-        assertTrue (manager.findMissionWithAgent(agent).getLastEdit()==null);
         manager.finishTheMission(mission);
-        assertTrue (manager.findMissionWithAgent(agent).getLastEdit()!=null);
-        // manager.attachAgentToMission(JamesBond(), mission);
-        // this shouldn't work after closing the mission, IMHO
+        mission = missionManager.getMission(mission.getId());
+        assertTrue(mission.getEnd().isBefore(LocalDate.now()));
     }
     
 }
