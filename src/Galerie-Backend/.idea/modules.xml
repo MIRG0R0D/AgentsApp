@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GraveManager-Backend.iml" filepath="$PROJECT_DIR$/GraveManager-Backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Galerie-Backend.iml" filepath="$PROJECT_DIR$/Galerie-Backend.iml" />
     </modules>
   </component>
 </project>

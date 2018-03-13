@@ -118,7 +118,7 @@ public class AgentManagerImplTest {
         assertTrue(result.size()==2);
         assertTrue(result.contains(stierlitz));
         assertTrue(result.contains(bond));
-        assertTrue(bondId != stierId);
+        assertTrue(bondID != stierId);
     }
     
 }

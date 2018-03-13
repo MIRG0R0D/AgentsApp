@@ -46,7 +46,7 @@ public class SecretManagerImplTest {
                 .name("Bond, James")
                 .born(LocalDate.of(1, Month.JANUARY, 1964))
                 .level("00")
-                .id(7)
+                .id(7L)
                 .build();
     }
     private Agent English(){
@@ -54,16 +54,19 @@ public class SecretManagerImplTest {
                 .name("Johnny English")
                 .born(LocalDate.of(25, Month.FEBRUARY, 1973))
                 .level("OO")
-                .id(13)
+                .id(13L)
                 .build();
     }
-    
-        // need to finish
-        // when Mission and MissionManager will be finished
-    private Mission secretMission(){
-        Mission buff = new Mission();
-        buff.setId(42);
-        buff.setName("The most secret mission");
+
+    private Mission InfiltrateSPD(){
+        return new MissionBuilder()
+                .setCodeName("spdfree")
+                .setDescription("Get info about spd organization")
+                .setEnd(LocalDate.of(15, Month.MARCH, 2017))
+                .setEnd(LocalDate.of(16, Month.MARCH, 2019))
+                .setId(null)
+                .setLocation("PRAHA")
+                .build();
     }
     
     /**
@@ -74,7 +77,7 @@ public class SecretManagerImplTest {
         
         manager = new SecretManagerImpl();
         Agent agent = English();
-        Mission mission = new Mission();
+        Mission mission = InfiltrateSPD();
         manager.attachAgentToMission(agent, mission);
         
         assertEquals(manager.findMissionWithAgent(agent), mission);
@@ -90,7 +93,7 @@ public class SecretManagerImplTest {
         manager = new SecretManagerImpl();
         Agent english = English();
         Agent bond = JamesBond();
-        Mission mission = new Mission();
+        Mission mission = InfiltrateSPD();
         manager.attachAgentToMission(english, mission);
         manager.attachAgentToMission(bond, mission);
         List <Agent> result = manager.findAgentsWithMission(mission);
@@ -108,7 +111,7 @@ public class SecretManagerImplTest {
     public void testAttachAgentToMission() {
         manager = new SecretManagerImpl();
         Agent agent = English();
-        Mission mission = new Mission();
+        Mission mission = InfiltrateSPD()
         manager.attachAgentToMission(agent, mission);
     }
 
@@ -120,7 +123,7 @@ public class SecretManagerImplTest {
         
         manager = new SecretManagerImpl();
         Agent agent = English();
-        Mission mission = new Mission();
+        Mission mission = InfiltrateSPD()
         manager.attachAgentToMission(agent, mission);
         
         assertTrue (manager.findMissionWithAgent(agent).getLastEdit()==null);
