@@ -78,10 +78,10 @@ public class MissionManagerImplTest {
     }
 
     /**
-     * Test of findAgentById method, of class AgentManagerImpl.
+     * Test of findMissionById method, of class MissionManagerImpl.
      */
     @Test
-    public void testFindAgentById() {
+    public void testFindMissionById() {
         manager = new MissionManagerImpl();;
         Mission spdMission = InfiltrateSPD();
         Long spdId = manager.createMission(spdMission);
@@ -105,10 +105,28 @@ public class MissionManagerImplTest {
     }
 
     /**
+     * Test of getUncompletedMissions method, of class MissionManagerImpl.
+     */
+    @Test
+    public void testFindAllUncompletedMissions() {
+        manager = new MissionManagerImpl();
+        Mission terroristMission = KillTerrorists();
+        Mission spdMission = InfiltrateSPD();
+        manager.createMission(terroristMission);
+        manager.createMission(spdMission);
+
+        List<Mission> result = manager.getUncompletedMissions();
+        
+        assertTrue(result.size()==1);
+        assertFalse(result.contains(terroristMission));
+        assertTrue(result.contains(spdMission));
+    }
+
+    /**
      * Test of getMissions method, of class MissionManagerImpl.
      */
     @Test
-    public void testFindAllAgents() {
+    public void testFindAllMission() {
         manager = new MissionManagerImpl();
         Mission terroristMission = KillTerrorists();
         Mission spdMission = InfiltrateSPD();
@@ -116,7 +134,7 @@ public class MissionManagerImplTest {
         Long spdId = manager.createMission(spdMission);
 
         List<Mission> result = manager.getMissions();
-        
+
         assertTrue(result.size()==2);
         assertTrue(result.contains(terroristMission));
         assertTrue(result.contains(spdMission));
