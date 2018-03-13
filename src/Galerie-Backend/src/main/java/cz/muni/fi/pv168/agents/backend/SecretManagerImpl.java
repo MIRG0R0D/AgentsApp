@@ -15,7 +15,7 @@ public class SecretManagerImpl implements SecretManager {
      */
     @Override
     public Mission findMissionWithAgent(Agent agent) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     /**
@@ -25,7 +25,7 @@ public class SecretManagerImpl implements SecretManager {
      */
     @Override
     public List<Agent> findAgentsWithMission(Mission mission) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     /**
@@ -35,7 +35,7 @@ public class SecretManagerImpl implements SecretManager {
      */
     @Override
     public void attachAgentToMission(Agent agent, Mission mission) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     /**
@@ -44,7 +44,7 @@ public class SecretManagerImpl implements SecretManager {
      */
     @Override
     public void finishTheMission(Mission mission) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
 

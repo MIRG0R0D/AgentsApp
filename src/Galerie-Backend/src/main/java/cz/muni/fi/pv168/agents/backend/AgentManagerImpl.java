@@ -12,7 +12,7 @@ public class AgentManagerImpl implements AgentManager {
      */
     @Override
     public Long create(Agent agent) {
-        return null;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     /**
@@ -22,7 +22,7 @@ public class AgentManagerImpl implements AgentManager {
      */
     @Override
     public Agent findAgentById(Long id) {
-        return null;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     /**
@@ -33,7 +33,7 @@ public class AgentManagerImpl implements AgentManager {
      */
     @Override
     public void update(Long id, Agent agent) {
-        
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     /**
@@ -42,7 +42,7 @@ public class AgentManagerImpl implements AgentManager {
      */
     @Override
     public List<Agent> findAllAgents() {
-        return null;
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
 }
