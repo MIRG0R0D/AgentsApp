@@ -13,7 +13,6 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
@@ -21,45 +20,29 @@ import static org.junit.Assert.*;
  */
 public class SecretManagerImplTest {
     private SecretManager manager;
-    
-    public SecretManagerImplTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
+    private Agent jamesBond;
+    private Agent vonStierlitz;
+    private Mission infiltrateSPD;
+
     @Before
     public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
-
-    private Agent JamesBond(){
-        return new AgentBuilder()
+        manager = new SecretManagerImpl();
+        
+        jamesBond = new AgentBuilder()
                 .name("Bond, James")
                 .born(LocalDate.of(1, Month.JANUARY, 1964))
                 .level("00")
-                .id(7L)
+                .id(null)
                 .build();
-    }
-    private Agent English(){
-        return new AgentBuilder()
-                .name("Johnny English")
-                .born(LocalDate.of(25, Month.FEBRUARY, 1973))
-                .level("OO")
-                .id(13L)
-                .build();
-    }
 
-    private Mission InfiltrateSPD(){
-        return new MissionBuilder()
+        vonStierlitz = new AgentBuilder()
+                .name("Max Otto vonStierlitz")
+                .born(LocalDate.of(8, Month.OCTOBER, 1900))
+                .level("00")
+                .id(null)
+                .build();
+        
+        infiltrateSPD = new MissionBuilder()
                 .setCodeName("spdfree")
                 .setDescription("Get info about spd organization")
                 .setEnd(LocalDate.of(15, Month.MARCH, 2017))
@@ -67,17 +50,17 @@ public class SecretManagerImplTest {
                 .setId(null)
                 .setLocation("PRAHA")
                 .build();
+
     }
-    
+      
     /**
      * Test of findMissionWithAgent method, of class SecretManagerImpl.
      */
     @Test
     public void testFindMissionWithAgent() {
         
-        manager = new SecretManagerImpl();
-        Agent agent = English();
-        Mission mission = InfiltrateSPD();
+        Agent agent = jamesBond;
+        Mission mission = infiltrateSPD;
         manager.attachAgentToMission(agent, mission);
         
         assertEquals(manager.findMissionWithAgent(agent), mission);
@@ -90,16 +73,17 @@ public class SecretManagerImplTest {
     @Test
     public void testFindAgentsWithMission() {
         
-        manager = new SecretManagerImpl();
-        Agent english = English();
-        Agent bond = JamesBond();
-        Mission mission = InfiltrateSPD();
-        manager.attachAgentToMission(english, mission);
+        Agent stier = vonStierlitz;
+        Agent bond = jamesBond;
+        Mission mission = infiltrateSPD;
+        
+        manager.attachAgentToMission(stier, mission);
         manager.attachAgentToMission(bond, mission);
+        
         List <Agent> result = manager.findAgentsWithMission(mission);
         
         assertTrue(result.size()==2);
-        assertTrue(result.contains(english));
+        assertTrue(result.contains(stier));
         assertTrue(result.contains(bond));
         
     }
@@ -109,10 +93,10 @@ public class SecretManagerImplTest {
      */
     @Test
     public void testAttachAgentToMission() {
-        manager = new SecretManagerImpl();
-        Agent agent = English();
-        Mission mission = InfiltrateSPD();
+        Agent agent = jamesBond;
+        Mission mission = infiltrateSPD;
         manager.attachAgentToMission(agent, mission);
+        
     }
 
     /**
@@ -120,13 +104,16 @@ public class SecretManagerImplTest {
      */
     @Test
     public void testFinishTheMission() {
+        
         MissionManagerImpl missionManager = new MissionManagerImpl();
-        manager = new SecretManagerImpl();
-        Agent agent = English();
-        Mission mission = InfiltrateSPD();
+        Agent agent = jamesBond;
+        Mission mission = infiltrateSPD;
+        
         manager.attachAgentToMission(agent, mission);
         manager.finishTheMission(mission);
+        
         mission = missionManager.getMission(mission.getId());
+        
         assertTrue(mission.getEnd().isBefore(LocalDate.now()));
     }
     

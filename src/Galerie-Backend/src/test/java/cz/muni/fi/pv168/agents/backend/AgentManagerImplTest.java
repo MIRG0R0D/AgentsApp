@@ -9,13 +9,9 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.util.List;
 
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
 
 /**
  * @author Dima
@@ -45,11 +41,6 @@ public class AgentManagerImplTest {
                 .id(null)
                 .build();
 
-        //manager = new AgentManagerImpl();
-    }
-
-    @After
-    public void tearDown() {
     }
 
     /**
@@ -58,11 +49,15 @@ public class AgentManagerImplTest {
     @Test
     public void testCreate() {
         Long bondId = manager.create(jamesBond);
-        Long stierId = manager.create(vonStierlitz());
+        Long stierId = manager.create(vonStierlitz);
+               
         assertNotNull(bondId);
-        assertFalse(bondId.equals("null"));
-        assertFalse(stierId.equals("null"));
-        assertTrue(bondId != stierId);
+        assertNotNull(stierId);
+        
+        assertNotEquals(bondId,null);
+        assertNotEquals(stierId,null);
+        
+        assertEquals(bondId, stierId);
 
     }
 
@@ -71,9 +66,9 @@ public class AgentManagerImplTest {
      */
     @Test
     public void testFindAgentById() {
-        Agent bond = jamesBond();
-        Long id = manager.create(jamesBond());
-        assertEquals(manager.findAgentById(id), bond);
+        Agent bond = jamesBond;
+        Long id = manager.create(jamesBond);
+        assertEquals(manager.findAgentById(id), jamesBond);
     }
 
     /**
@@ -81,12 +76,14 @@ public class AgentManagerImplTest {
      */
     @Test
     public void testUpdate() {
-        Agent stierlitz = vonStierlitz();
-        Long id = manager.create(vonStierlitz());
+        Agent stierlitz = vonStierlitz;
+        Long id = manager.create(vonStierlitz);
         String newName = "Vsevolod";
         stierlitz.setName(newName);
         manager.update(id, stierlitz);
+        
         assertEquals(manager.findAgentById(id).getName(), newName);
+        assertEquals(manager.findAgentById(id), stierlitz);
 
     }
 
@@ -95,9 +92,9 @@ public class AgentManagerImplTest {
      */
     @Test
     public void testFindAllAgents() {
-        manager = new AgentManagerImpl();
-        Agent bond = jamesBond();
-        Agent stierlitz = vonStierlitz();
+        Agent bond = jamesBond;
+        Agent stierlitz = vonStierlitz;
+        
         Long bondID = manager.create(bond);
         Long stierId = manager.create(stierlitz);
 
@@ -106,7 +103,7 @@ public class AgentManagerImplTest {
         assertEquals(2, result.size());
         assertTrue(result.contains(stierlitz));
         assertTrue(result.contains(bond));
-        assertTrue(bondID != stierId);
+        assertNotEquals(bondID, stierId);
     }
 
 }
