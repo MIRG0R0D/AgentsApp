@@ -16,36 +16,24 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 /**
- *
  * @author Dima
  */
 public class MissionManagerImplTest {
 
     private MissionManagerImpl manager;
+    private Mission killTerrorists;
+    private Mission infiltrateSPD;
 
     public MissionManagerImplTest() {
     }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
+
+
     @Before
     public void setUp() {
-         
-        //manager = new MissionManagerImpl();
-    }
-    
-    @After
-    public void tearDown() {
-    }
 
-    private Mission killTerrorists(){
-        return new MissionBuilder()
+        manager = new MissionManagerImpl();
+
+        killTerrorists = new MissionBuilder()
                 .setCodeName("killingspree")
                 .setDescription("Kill them all")
                 .setEnd(LocalDate.of(8, Month.NOVEMBER, 2000))
@@ -53,10 +41,8 @@ public class MissionManagerImplTest {
                 .setId(null)
                 .setLocation("BRNO")
                 .build();
-    }
 
-    private Mission InfiltrateSPD(){
-        return new MissionBuilder()
+        infiltrateSPD = new MissionBuilder()
                 .setCodeName("spdfree")
                 .setDescription("Get info about spd organization")
                 .setEnd(LocalDate.of(15, Month.MARCH, 2017))
@@ -64,19 +50,20 @@ public class MissionManagerImplTest {
                 .setId(null)
                 .setLocation("PRAHA")
                 .build();
+
     }
+
+
     /**
      * Test of create method, of class MissionManagerImpl.
      */
     @Test
     public void testCreate() {
-        manager = new MissionManagerImpl();
-        Long terroristId = manager.createMission(killTerrorists());
-        Long spdId = manager.createMission(InfiltrateSPD());
-        assertFalse (terroristId.equals("null"));
-        assertFalse (spdId.equals("null"));
-        assertTrue (terroristId != spdId);
-        
+        Long terroristId = manager.createMission(killTerrorists);
+        Long spdId = manager.createMission(infiltrateSPD);
+        assertNotNull(terroristId);
+        assertNotNull(spdId);
+        assertNotEquals(terroristId, spdId);
     }
 
     /**
@@ -84,12 +71,10 @@ public class MissionManagerImplTest {
      */
     @Test
     public void testFindMissionById() {
-        manager = new MissionManagerImpl();;
-        Mission spdMission = InfiltrateSPD();
-        Long spdId = manager.createMission(spdMission);
-        
-        assertEquals(manager.getMission(spdId), spdMission);
-        
+
+        Long spdId = manager.createMission(infiltrateSPD);
+        assertEquals(manager.getMission(spdId), infiltrateSPD);
+
     }
 
     /**
@@ -97,8 +82,7 @@ public class MissionManagerImplTest {
      */
     @Test
     public void testUpdate() {
-        manager = new MissionManagerImpl();
-        Long terroristId = manager.createMission(killTerrorists());
+        Long terroristId = manager.createMission(killTerrorists);
         Mission mission = manager.getMission(terroristId);
         String newCodeName = "NewName";
         mission.setCodeName(newCodeName);
@@ -111,17 +95,14 @@ public class MissionManagerImplTest {
      */
     @Test
     public void testFindAllUncompletedMissions() {
-        manager = new MissionManagerImpl();
-        Mission terroristMission = killTerrorists();
-        Mission spdMission = InfiltrateSPD();
-        manager.createMission(terroristMission);
-        manager.createMission(spdMission);
+        manager.createMission(killTerrorists);
+        manager.createMission(infiltrateSPD);
 
         List<Mission> result = manager.getUncompletedMissions();
-        
-        assertTrue(result.size()==1);
-        assertFalse(result.contains(terroristMission));
-        assertTrue(result.contains(spdMission));
+
+        assertTrue(result.size() == 1);
+        assertFalse(result.contains(killTerrorists));
+        assertTrue(result.contains(infiltrateSPD));
     }
 
     /**
@@ -129,25 +110,15 @@ public class MissionManagerImplTest {
      */
     @Test
     public void testFindAllMission() {
-        manager = new MissionManagerImpl();
-        Mission terroristMission = killTerrorists();
-        Mission spdMission = InfiltrateSPD();
-        Long terroristId = manager.createMission(terroristMission);
-        Long spdId = manager.createMission(spdMission);
+        Long terroristId = manager.createMission(killTerrorists);
+        Long spdId = manager.createMission(infiltrateSPD);
 
         List<Mission> result = manager.getMissions();
 
-        assertTrue(result.size()==2);
         assertThat(result, Matchers.hasSize(2));
-
-        assertThat("asldkfjasldkfjaslkdfj", CoreMatchers.allOf(
-                CoreMatchers.containsString("jkl"),
-                CoreMatchers.startsWith("a")
-        ));
-
-        assertTrue(result.contains(terroristMission));
-        assertTrue(result.contains(spdMission));
+        assertTrue(result.contains(killTerrorists));
+        assertTrue(result.contains(infiltrateSPD));
         assertTrue(terroristId != spdId);
     }
-    
+
 }
