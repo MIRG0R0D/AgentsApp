@@ -9,8 +9,8 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.util.List;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
+import static org.junit.Assert.*;
 
 
 /**
@@ -21,6 +21,7 @@ public class AgentManagerImplTest {
     private AgentManagerImpl manager;
     private Agent jamesBond;
     private Agent vonStierlitz;
+    private Agent badAgent;
 
 
     @Before
@@ -29,15 +30,21 @@ public class AgentManagerImplTest {
 
         jamesBond = new AgentBuilder()
                 .name("Bond, James")
-                .born(LocalDate.of(1, Month.JANUARY, 1964))
+                .born(LocalDate.of(1964, Month.JANUARY, 1))
                 .level("00")
                 .id(null)
                 .build();
 
         vonStierlitz = new AgentBuilder()
                 .name("Max Otto vonStierlitz")
-                .born(LocalDate.of(8, Month.OCTOBER, 1900))
+                .born(LocalDate.of(1900, Month.OCTOBER, 8))
                 .level("00")
+                .id(null)
+                .build();
+        badAgent=new AgentBuilder()
+                .name("")
+                .born(LocalDate.of(2050, Month.MARCH, 5))
+                .level("")
                 .id(null)
                 .build();
 
@@ -60,6 +67,13 @@ public class AgentManagerImplTest {
         assertEquals(bondId, stierId);
 
     }
+    @Test
+    public void testCreateFailure() {
+        Long badId = manager.create(badAgent);
+               
+        assertNull(badId);
+        
+    }
 
     /**
      * Test of findAgentById method, of class AgentManagerImpl.
@@ -76,6 +90,19 @@ public class AgentManagerImplTest {
      */
     @Test
     public void testUpdate() {
+        Agent stierlitz = vonStierlitz;
+        Long id = manager.create(vonStierlitz);
+        String newName = "Vsevolod";
+        stierlitz.setName(newName);
+        manager.update(id, stierlitz);
+        
+        assertEquals(manager.findAgentById(id).getName(), newName);
+        assertEquals(manager.findAgentById(id), stierlitz);
+
+    }
+    
+     @Test
+    public void testUpdateFailure() {
         Agent stierlitz = vonStierlitz;
         Long id = manager.create(vonStierlitz);
         String newName = "Vsevolod";
