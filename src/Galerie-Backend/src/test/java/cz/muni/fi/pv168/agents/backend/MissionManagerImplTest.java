@@ -24,6 +24,7 @@ public class MissionManagerImplTest {
     private MissionManagerImpl manager;
     private Mission killTerrorists;
     private Mission infiltrateSPD;
+    private Mission badMission;
 
     public MissionManagerImplTest() {
     }
@@ -39,10 +40,18 @@ public class MissionManagerImplTest {
 
         manager = new MissionManagerImpl(ds);
 
+        badMission = new MissionBuilder()
+                .setCodeName(null)
+                .setDescription("")
+                .setStart(LocalDate.of(15, Month.NOVEMBER, 2000))
+                .setEnd(LocalDate.of(10, Month.NOVEMBER, 2000))
+                .setId(null)
+                .setLocation("")
+                .build();
         killTerrorists = new MissionBuilder()
                 .setCodeName("killingspree")
                 .setDescription("Kill them all")
-                .setEnd(LocalDate.of(8, Month.NOVEMBER, 2000))
+                .setStart(LocalDate.of(8, Month.NOVEMBER, 2000))
                 .setEnd(LocalDate.of(10, Month.NOVEMBER, 2000))
                 .setId(null)
                 .setLocation("BRNO")
@@ -51,7 +60,7 @@ public class MissionManagerImplTest {
         infiltrateSPD = new MissionBuilder()
                 .setCodeName("spdfree")
                 .setDescription("Get info about spd organization")
-                .setEnd(LocalDate.of(15, Month.MARCH, 2017))
+                .setStart(LocalDate.of(15, Month.MARCH, 2017))
                 .setEnd(LocalDate.of(16, Month.MARCH, 2019))
                 .setId(null)
                 .setLocation("PRAHA")
@@ -71,6 +80,13 @@ public class MissionManagerImplTest {
         assertNotNull(spdId);
         assertNotEquals(terroristId, spdId);
     }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void testCreateBadMission(){
+        
+        long bad = manager.createMission(badMission);
+        
+    }
 
     /**
      * Test of findMissionById method, of class MissionManagerImpl.
@@ -81,6 +97,18 @@ public class MissionManagerImplTest {
         Long spdId = manager.createMission(infiltrateSPD);
         assertEquals(manager.getMission(spdId), infiltrateSPD);
 
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void testFindMissionByNullID(){
+        Long spdId = manager.createMission(infiltrateSPD);
+        manager.getMission(null);
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void testFindMissionByBadID(){
+        Long spdId = manager.createMission(infiltrateSPD);
+        manager.getMission("extremly bad ID");
     }
 
     /**
@@ -96,6 +124,16 @@ public class MissionManagerImplTest {
         assertEquals(manager.getMission(terroristId).getCodeName(), newCodeName);
     }
 
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void testUpdateFailure(){
+        Long terroristId = manager.createMission(killTerrorists);
+        Mission mission = manager.getMission(terroristId);
+        String newCodeName = "";
+        mission.setCodeName(newCodeName);
+        manager.updateMission(terroristId, mission);
+    }
+    
     /**
      * Test of getUncompletedMissions method, of class MissionManagerImpl.
      */
