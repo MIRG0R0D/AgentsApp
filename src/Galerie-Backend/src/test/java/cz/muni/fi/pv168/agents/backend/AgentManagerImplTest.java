@@ -8,8 +8,10 @@ package cz.muni.fi.pv168.agents.backend;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.List;
+import cz.muni.fi.pv168.agents.common.*;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.junit.Assert.*;
 
-import org.apache.derby.jdbc.ClientDataSource;
 import org.junit.*;
 import static org.junit.Assert.*;
 
@@ -27,12 +29,7 @@ public class AgentManagerImplTest {
 
     @Before
     public void setUp() {
-        ClientDataSource ds = new ClientDataSource();
-        ds.setServerName("localhost");
-        ds.setPortNumber(1527);
-        ds.setDatabaseName("user-test");
-
-        manager = new AgentManagerImpl(ds);
+        manager = new AgentManagerImpl();
 
         jamesBond = new AgentBuilder()
                 .name("Bond, James")
@@ -40,6 +37,7 @@ public class AgentManagerImplTest {
                 .level("00")
                 .id(null)
                 .build();
+        badAgent = new Agent(null,null, null, null);
 
         vonStierlitz = new AgentBuilder()
                 .name("Max Otto vonStierlitz")
@@ -70,8 +68,32 @@ public class AgentManagerImplTest {
         assertNotEquals(bondId,null);
         assertNotEquals(stierId,null);
         
-        assertEquals(bondId, stierId);
+        assertNotEquals(bondId, stierId);
 
+    }
+    
+    @Test
+    public void createAgentWithNullName() {
+        Agent bad = new AgentBuilder().name(null).build();
+        assertThatThrownBy(() -> manager.create(bad))
+                .isInstanceOf(ValidationException.class);
+    }
+    
+    
+    @Test
+    public void createAgentWithNullLevel() {
+        Agent bad = new AgentBuilder().level(null).build();
+        assertThatThrownBy(() -> manager.create(bad))
+                .isInstanceOf(ValidationException.class);
+    }
+    
+    // Test exception using AssertJ assertThatThrownBy() method
+    // this requires Java 8 due to using lambda expression
+    @Test
+    public void createBadAgent() {
+        Agent bad = badAgent;
+        assertThatThrownBy(() -> manager.create(bad))
+                .isInstanceOf(ValidationException.class);
     }
     @Test
     public void testCreateFailure() {
@@ -120,6 +142,30 @@ public class AgentManagerImplTest {
 
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void updateNullBody() {
+        Long id = manager.create(vonStierlitz);
+        manager.update(id, null);
+    }
+    
+    @Test(expected=IllegalEntityException.class)
+    public void testUpdateWithNullId(){
+        
+        manager.update(null, vonStierlitz);
+    }
+    
+    @Test
+    public void testBadUpdates(){
+        Agent stierlitz = vonStierlitz;
+        Long id = manager.create(stierlitz);
+        stierlitz.setName("");
+        
+        stierlitz.setLevel(null);
+        
+        assertThatThrownBy(() -> manager.update(id, stierlitz))
+                .isInstanceOf(ValidationException.class);
+    }
+    
     /**
      * Test of findAllAgents method, of class AgentManagerImpl.
      */
