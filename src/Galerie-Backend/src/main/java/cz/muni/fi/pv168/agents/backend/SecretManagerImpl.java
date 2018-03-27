@@ -16,15 +16,18 @@ import java.util.logging.Logger;
 
 
 public class SecretManagerImpl implements SecretManager {
-    MissionManager manager;
+    private final AgentManagerImpl agentManager;
+    private final MissionManager missionManager;
 
     private final DataSource ds;
     
     public SecretManagerImpl(DataSource ds) {
-        this.manager = new MissionManagerImpl(ds);
+        missionManager = new MissionManagerImpl(ds);
+        agentManager = new AgentManagerImpl(ds);
         this.ds=ds;
 
     }
+
 
     /**
      * finding some mission with the certain agent
@@ -35,7 +38,24 @@ public class SecretManagerImpl implements SecretManager {
     // can 1 agent be on several missions?????
     @Override
     public Mission findMissionWithAgent(Agent agent) {
-        throw new UnsupportedOperationException("Not supported yet.");
+
+        List <Agent> agents = new ArrayList<>();
+        try (Connection con = ds.getConnection()) {
+            PreparedStatement ps = con.prepareStatement("select * from APP.MISSION_ASSIGNMENT WHERE AGENT_ID = ?", Statement.RETURN_GENERATED_KEYS);
+            ps.setLong(1, agent.getId());
+            ResultSet rs = ps.executeQuery();
+
+            if  (rs.next()) {
+                long missionId = rs.getLong(2);
+                long agentId = rs.getLong(3);
+
+                return missionManager.getMission(missionId);
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
     }
 
     /**
@@ -60,7 +80,7 @@ public class SecretManagerImpl implements SecretManager {
         
         List <Agent> agents = new ArrayList<>();
         try (Connection con = ds.getConnection()) {
-            PreparedStatement ps = con.prepareStatement("select * from APP.MISSION_ASSIGNMENT WHERE id = ?", Statement.RETURN_GENERATED_KEYS);
+            PreparedStatement ps = con.prepareStatement("select * from APP.MISSION_ASSIGNMENT WHERE MISSION_ID = ?", Statement.RETURN_GENERATED_KEYS);
             ps.setLong(1, mission.getId());
             ResultSet rs = ps.executeQuery();
 
@@ -88,7 +108,7 @@ public class SecretManagerImpl implements SecretManager {
     @Override
     public void finishTheMission(Mission mission) {
         mission.setEnd(LocalDate.now());
-        manager.updateMission(mission.getId(), mission);
+        missionManager.updateMission(mission.getId(), mission);
         
     }
 
