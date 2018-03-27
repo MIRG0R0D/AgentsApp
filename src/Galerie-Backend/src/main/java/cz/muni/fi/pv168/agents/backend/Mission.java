@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class Mission {
 
-    private final Long id;
+    private Long id;
     private String codeName;
     private LocalDate start;
     private LocalDate end;
@@ -24,6 +24,10 @@ public class Mission {
 
     public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getCodeName() {

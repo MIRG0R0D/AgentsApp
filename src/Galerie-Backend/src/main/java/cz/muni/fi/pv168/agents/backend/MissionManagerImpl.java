@@ -1,13 +1,26 @@
 package cz.muni.fi.pv168.agents.backend;
 
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import javax.sql.DataSource;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 public class MissionManagerImpl implements MissionManager {
 
+    
+    private final DataSource ds;
     public MissionManagerImpl(DataSource ds) {
 
+        this.ds=ds;
     }
 
     /**
@@ -17,8 +30,41 @@ public class MissionManagerImpl implements MissionManager {
      */
     @Override
     public Long createMission(Mission mis) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        
+        
+        Connection con = null;
+        try {
+            con = ds.getConnection();
+            PreparedStatement ps = con.prepareStatement("insert into APP.MISSION(CODENAME, START, END, DESCRIPTION, LOCATION) values (?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
+            
+            ps.setString(1, mis.getCodeName());
+            ps.setDate(2, Date.valueOf(mis.getStart()));
+            ps.setDate(3, Date.valueOf(mis.getEnd()));
+            ps.setString(4, mis.getDescription() );
+            ps.setString(5, mis.getLocation() );
+            ps.executeUpdate();
+            ResultSet keys = ps.getGeneratedKeys();
+            if (keys.next()) {
+                long key = keys.getLong(1);
+                mis.setId(key);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(MissionManagerImpl.class.getName()).log(Level.SEVERE, "Error executing insert: ", ex);
+        } finally {
+            if (con != null) {
+                try {
+                    con.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, "Error closing connection: ", ex);
+                }
+            }
+        }
+
+        
+        return mis.getId();
     }
+    
 
     /**
      * update existing mission
@@ -27,7 +73,39 @@ public class MissionManagerImpl implements MissionManager {
      */
     @Override
     public void updateMission(Long id, Mission mis) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        Connection con = null;
+        try {
+            con = ds.getConnection();
+            PreparedStatement ps = con.prepareStatement("UPDATE APP.MISSION\n" +
+                    "SET CODENAME=?, START=?, END=?, DESCRIPTION=?, LOCATION=?\n" +
+                    "WHERE id = ?;", Statement.RETURN_GENERATED_KEYS);
+            ps.setString(1, mis.getCodeName());
+            ps.setDate(2, Date.valueOf(mis.getStart()));
+            ps.setDate(3, Date.valueOf(mis.getEnd()));
+            ps.setString(4, mis.getDescription() );
+            ps.setString(5, mis.getLocation() );
+            ps.setLong(6, id);
+            ps.executeUpdate();
+            ResultSet keys = ps.getGeneratedKeys();
+            if (keys.next()) {
+                long key = keys.getLong(1);
+                mis.setId(key);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(MissionManagerImpl.class.getName()).log(Level.SEVERE, "Error executing update: ", ex);
+        } finally {
+            if (con != null) {
+                try {
+                    con.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(MissionManagerImpl.class.getName()).log(Level.SEVERE, "Error closing connection: ", ex);
+                }
+            }
+        }
+
+        
+        
     }
 
     /**
@@ -36,7 +114,24 @@ public class MissionManagerImpl implements MissionManager {
      */
     @Override
     public List<Mission> getMissions() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        List<Mission> mis = new ArrayList<>();
+        try (Connection con = ds.getConnection()) {
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery("select * from APP.MISSION");
+            while (rs.next()) {
+                Long id = rs.getLong(1);
+                String codeName = rs.getString(2);
+                LocalDate start = rs.getDate(3).toLocalDate();
+                LocalDate end = rs.getDate(4).toLocalDate();
+                String description = rs.getString(5);
+                String location = rs.getString(6);
+                Mission current = new Mission(id, codeName, start, end, location, description);
+                mis.add(current);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return mis;
     }
 
     /**
@@ -45,7 +140,24 @@ public class MissionManagerImpl implements MissionManager {
      */
     @Override
     public List<Mission> getUncompletedMissions() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       List<Mission> mis = new ArrayList<>();
+        try (Connection con = ds.getConnection()) {
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery("select * from APP.MISSION WHERE END IS NULL");
+            while (rs.next()) {
+                Long id = rs.getLong(1);
+                String codeName = rs.getString(2);
+                LocalDate start = rs.getDate(3).toLocalDate();
+                LocalDate end = rs.getDate(4).toLocalDate();
+                String description = rs.getString(5);
+                String location = rs.getString(6);
+                Mission current = new Mission(id, codeName, start, end, location, description);
+                mis.add(current);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return mis;
     }
 
     /**
@@ -55,7 +167,28 @@ public class MissionManagerImpl implements MissionManager {
      */
     @Override
     public Mission getMission(Long id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        
+        try (Connection con = ds.getConnection()) {
+            PreparedStatement ps = con.prepareStatement("select * from APP.MISSION WHERE id = ?", Statement.RETURN_GENERATED_KEYS);
+            ps.setLong(1, id);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                id = rs.getLong(1);
+                String codeName = rs.getString(2);
+                LocalDate start = rs.getDate(3).toLocalDate();
+                LocalDate end = rs.getDate(4).toLocalDate();
+                String description = rs.getString(5);
+                String location = rs.getString(6);
+                Mission mis = new Mission(id, codeName, start, end, location, description);
+                return mis;
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
     }
 
 }
