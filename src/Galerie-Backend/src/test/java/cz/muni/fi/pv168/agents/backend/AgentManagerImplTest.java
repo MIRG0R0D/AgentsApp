@@ -8,13 +8,12 @@ package cz.muni.fi.pv168.agents.backend;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.List;
-import cz.muni.fi.pv168.agents.common.*;
+import org.apache.derby.jdbc.ClientDataSource;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.Assert.*;
 
 import org.junit.*;
 import static org.junit.Assert.*;
-
 
 /**
  * @author Dima
@@ -26,10 +25,16 @@ public class AgentManagerImplTest {
     private Agent vonStierlitz;
     private Agent badAgent;
 
-
     @Before
     public void setUp() {
-        manager = new AgentManagerImpl();
+        
+        ClientDataSource ds = new ClientDataSource();
+        ds.setServerName("localhost");
+        ds.setPortNumber(1527);
+        ds.setDatabaseName("user-test");
+
+        manager = new AgentManagerImpl(ds);
+        
 
         jamesBond = new AgentBuilder()
                 .name("Bond, James")
@@ -37,7 +42,7 @@ public class AgentManagerImplTest {
                 .level("00")
                 .id(null)
                 .build();
-        badAgent = new Agent(null,null, null, null);
+        badAgent = new Agent(null, null, null, null);
 
         vonStierlitz = new AgentBuilder()
                 .name("Max Otto vonStierlitz")
@@ -45,7 +50,8 @@ public class AgentManagerImplTest {
                 .level("00")
                 .id(null)
                 .build();
-        badAgent=new AgentBuilder()
+
+        badAgent = new AgentBuilder()
                 .name("")
                 .born(LocalDate.of(2050, Month.MARCH, 5))
                 .level("")
@@ -61,42 +67,39 @@ public class AgentManagerImplTest {
     public void testCreate() {
         Long bondId = manager.create(jamesBond);
         Long stierId = manager.create(vonStierlitz);
-               
+
         assertNotNull(bondId);
         assertNotNull(stierId);
-        
-        assertNotEquals(bondId,null);
-        assertNotEquals(stierId,null);
-        
+
+  
+
         assertNotEquals(bondId, stierId);
 
     }
-    
+
     @Test
     public void createAgentWithNullName() {
         Agent bad = new AgentBuilder().name(null).build();
         assertThatThrownBy(() -> manager.create(bad))
                 .isInstanceOf(IllegalArgumentException.class);
     }
-    
-    
+
     @Test
     public void createAgentWithNullLevel() {
         Agent bad = new AgentBuilder().level(null).build();
         assertThatThrownBy(() -> manager.create(bad))
                 .isInstanceOf(IllegalArgumentException.class);
     }
-    
+
     // Test exception using AssertJ assertThatThrownBy() method
     // this requires Java 8 due to using lambda expression
     @Test
     public void createBadAgent() {
         Agent bad = badAgent;
-        
+
         assertThatThrownBy(() -> manager.create(bad))
                 .isInstanceOf(IllegalArgumentException.class);
     }
-
 
     /**
      * Test of findAgentById method, of class AgentManagerImpl.
@@ -107,10 +110,11 @@ public class AgentManagerImplTest {
         Long id = manager.create(jamesBond);
         assertEquals(manager.findAgentById(id), jamesBond);
     }
+
     @Test(expected = IllegalArgumentException.class)
-    public void testFindAgentByBadID(){
+    public void testFindAgentByBadID() {
         long bad = manager.create(badAgent);
-        
+
     }
 
     /**
@@ -118,25 +122,24 @@ public class AgentManagerImplTest {
      */
     @Test
     public void testUpdate() {
-        Agent stierlitz = vonStierlitz;
         Long id = manager.create(vonStierlitz);
         String newName = "Vsevolod";
-        stierlitz.setName(newName);
-        manager.update(id, stierlitz);
-        
+        vonStierlitz.setName(newName);
+        manager.update(id, vonStierlitz);
+
+        //change here
         assertEquals(manager.findAgentById(id).getName(), newName);
-        assertEquals(manager.findAgentById(id), stierlitz);
+        assertEquals(manager.findAgentById(id), vonStierlitz);
 
     }
-    
-     @Test(expected = IllegalArgumentException.class)
+
+    @Test(expected = IllegalArgumentException.class)
     public void testUpdateFailure() {
         Agent stierlitz = vonStierlitz;
         Long id = manager.create(vonStierlitz);
         String newName = "";
         stierlitz.setName(newName);
         manager.update(id, stierlitz);
-        
 
     }
 
@@ -144,28 +147,28 @@ public class AgentManagerImplTest {
     public void updateNullBody() {
         Long id = manager.create(vonStierlitz);
         manager.update(id, null);
-        
+
     }
-    
-    @Test(expected=IllegalEntityException.class)
-    public void testUpdateWithNullId(){
-        
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testUpdateWithNullId() {
+
         Long id = manager.create(vonStierlitz);
         manager.update(null, vonStierlitz);
     }
-    
+
     @Test
-    public void testBadUpdates(){
+    public void testBadUpdates() {
         Agent stierlitz = vonStierlitz;
         Long id = manager.create(stierlitz);
+        
         stierlitz.setName("");
-        
         stierlitz.setLevel(null);
-        
+
         assertThatThrownBy(() -> manager.update(id, stierlitz))
                 .isInstanceOf(IllegalArgumentException.class);
     }
-    
+
     /**
      * Test of findAllAgents method, of class AgentManagerImpl.
      */
@@ -173,7 +176,7 @@ public class AgentManagerImplTest {
     public void testFindAllAgents() {
         Agent bond = jamesBond;
         Agent stierlitz = vonStierlitz;
-        
+
         Long bondID = manager.create(bond);
         Long stierId = manager.create(stierlitz);
 

@@ -19,8 +19,10 @@ import static org.junit.Assert.*;
  */
 public class SecretManagerImplTest {
     private SecretManager manager;
+    private MissionManager missionManager;
     private Agent jamesBond;
     private Agent vonStierlitz;
+    private Agent badAgent;
     private Mission infiltrateSPD;
 
     @Before
@@ -31,7 +33,9 @@ public class SecretManagerImplTest {
         ds.setDatabaseName("user-test");
 
         manager = new SecretManagerImpl(ds);
+        missionManager = new MissionManagerImpl(ds);
         
+        badAgent = new Agent(null,null, null, null);
         jamesBond = new AgentBuilder()
                 .name("Bond, James")
                 .born(LocalDate.of(1, Month.JANUARY, 1964))
@@ -70,10 +74,39 @@ public class SecretManagerImplTest {
         assertEquals(manager.findMissionWithAgent(agent), mission);
         
     }
-
-    /**
-     * Test of findAgentsWithMission method, of class SecretManagerImpl.
+    
+      /**
+     * Test of attachAgentToMission method, of class SecretManagerImpl.
      */
+    @Test
+    public void testAttachAgentToMission() {
+        Agent agent = jamesBond;
+        Mission mission = infiltrateSPD;
+        manager.attachAgentToMission(agent, mission);
+        
+    }  
+    @Test(expected = IllegalArgumentException.class)
+    public void testAttachBadAgent() {
+        
+        Agent agent = badAgent;
+        Mission mission = infiltrateSPD;
+        manager.attachAgentToMission(agent, mission);
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void testAttachNullAgent() {
+        
+        Mission mission = infiltrateSPD;
+        manager.attachAgentToMission(null, mission);
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void testAttachNullMission() {
+        
+        Agent agent = vonStierlitz;
+        manager.attachAgentToMission(agent, null);
+    }
+    
     @Test
     public void testFindAgentsWithMission() {
         
@@ -92,29 +125,14 @@ public class SecretManagerImplTest {
         
     }
 
-    /**
-     * Test of attachAgentToMission method, of class SecretManagerImpl.
-     */
-    @Test
-    public void testAttachAgentToMission() {
-        Agent agent = jamesBond;
-        Mission mission = infiltrateSPD;
-        manager.attachAgentToMission(agent, mission);
-        
-    }
+
 
     /**
      * Test of finishTheMission method, of class SecretManagerImpl.
      */
     @Test
     public void testFinishTheMission() {
-        ClientDataSource ds = new ClientDataSource();
-        ds.setServerName("localhost");
-        ds.setPortNumber(1527);
-        ds.setDatabaseName("user-test");
 
-
-        MissionManagerImpl missionManager = new MissionManagerImpl(ds);
         Agent agent = jamesBond;
         Mission mission = infiltrateSPD;
         

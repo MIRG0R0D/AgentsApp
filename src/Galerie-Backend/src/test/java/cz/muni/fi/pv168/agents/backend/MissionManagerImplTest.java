@@ -105,11 +105,6 @@ public class MissionManagerImplTest {
         manager.getMission(null);
     }
     
-    @Test(expected = IllegalArgumentException.class)
-    public void testFindMissionByBadID(){
-        Long spdId = manager.createMission(infiltrateSPD);
-        manager.getMission("extremly bad ID");
-    }
 
     /**
      * Test of update method, of class MissionManagerImpl.
