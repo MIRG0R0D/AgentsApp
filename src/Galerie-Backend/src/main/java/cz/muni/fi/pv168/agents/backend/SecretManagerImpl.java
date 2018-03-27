@@ -1,11 +1,7 @@
 package cz.muni.fi.pv168.agents.backend;
 
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,7 +16,7 @@ public class SecretManagerImpl implements SecretManager {
     private final MissionManager missionManager;
 
     private final DataSource ds;
-    
+
     public SecretManagerImpl(DataSource ds) {
         missionManager = new MissionManagerImpl(ds);
         agentManager = new AgentManagerImpl(ds);
@@ -39,7 +35,6 @@ public class SecretManagerImpl implements SecretManager {
     @Override
     public Mission findMissionWithAgent(Agent agent) {
 
-        List <Agent> agents = new ArrayList<>();
         try (Connection con = ds.getConnection()) {
             PreparedStatement ps = con.prepareStatement("select * from APP.MISSION_ASSIGNMENT WHERE AGENT_ID = ?", Statement.RETURN_GENERATED_KEYS);
             ps.setLong(1, agent.getId());
@@ -65,7 +60,24 @@ public class SecretManagerImpl implements SecretManager {
      */
     @Override
     public List<Agent> findAgentsWithMission(Mission mission) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        List <Agent> agents = new ArrayList<>();
+        try (Connection con = ds.getConnection()) {
+            PreparedStatement ps = con.prepareStatement("select * from APP.MISSION_ASSIGNMENT WHERE MISSION_ID = ?", Statement.RETURN_GENERATED_KEYS);
+            ps.setLong(1, mission.getId());
+            ResultSet rs = ps.executeQuery();
+
+            if  (rs.next()) {
+                long missionId = rs.getLong(2);
+                long agentId = rs.getLong(3);
+
+                Agent agent = agentManager.findAgentById(agentId);
+                agents.add(agent);
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return agents;
     }
 
     /**
@@ -75,29 +87,27 @@ public class SecretManagerImpl implements SecretManager {
      */
     @Override
     public void attachAgentToMission(Agent agent, Mission mission) {
-        
-        // need to initialize first entry
-        
-        List <Agent> agents = new ArrayList<>();
-        try (Connection con = ds.getConnection()) {
-            PreparedStatement ps = con.prepareStatement("select * from APP.MISSION_ASSIGNMENT WHERE MISSION_ID = ?", Statement.RETURN_GENERATED_KEYS);
-            ps.setLong(1, mission.getId());
-            ResultSet rs = ps.executeQuery();
 
-            if  (rs.next()) {
-                agents = Arrays.asList( rs.getArray(2));
-                
-                LocalDate bord = rs.getDate(2).toLocalDate();
-                String level = rs.getString(3);
-                String name = rs.getString(4);
-                Agent agent = new Agent(id, bord, level, name);
-                return agent;
-            }
+        Connection con = null;
+        try {
+            con = ds.getConnection();
+            PreparedStatement ps = con.prepareStatement("insert into APP.MISSION_ASSIGNMENT(MISSION_ID, AGENT_ID) values (?, ?)", Statement.RETURN_GENERATED_KEYS);
+            ps.setLong(1, mission.getId());
+            ps.setLong(2, agent.getId());
+            ps.executeUpdate();
 
         } catch (SQLException ex) {
-            Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SecretManagerImpl.class.getName()).log(Level.SEVERE, "Error executing insert: ", ex);
+        } finally {
+            if (con != null) {
+                try {
+                    con.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(SecretManagerImpl.class.getName()).log(Level.SEVERE, "Error closing connection: ", ex);
+                }
+            }
         }
-        return null;
+
         
     }
 
