@@ -17,14 +17,28 @@ import java.util.logging.Logger;
 public class MissionManagerImpl implements MissionManager {
 
     
-    private final DataSource ds;
+    private DataSource ds = null;
+
     public MissionManagerImpl(DataSource ds) {
 
         this.ds=ds;
     }
 
-    private static check(Mission mis){
-        //todo
+    private void check(Mission mis){
+        if(mis == null){
+            throw new IllegalArgumentException();
+        }
+
+        if(mis.getCodeName() == null || mis.getCodeName().isEmpty()){
+            throw new IllegalArgumentException();
+        }
+
+        if(mis.getStart() == null){
+            throw new IllegalArgumentException();
+        }
+
+
+
     }
     
     /**
@@ -35,7 +49,7 @@ public class MissionManagerImpl implements MissionManager {
     @Override
     public Long createMission(Mission mis) {
         
-        
+        check(mis);
         
         Connection con = null;
         try {
@@ -77,7 +91,13 @@ public class MissionManagerImpl implements MissionManager {
      */
     @Override
     public void updateMission(Long id, Mission mis) {
-        
+
+        if(id == null || id < 1){
+            throw new IllegalArgumentException();
+        }
+
+        check(mis);
+
         Connection con = null;
         try {
             con = ds.getConnection();
@@ -171,7 +191,11 @@ public class MissionManagerImpl implements MissionManager {
      */
     @Override
     public Mission getMission(Long id) {
-        
+
+        if(id == null || id < 1){
+            throw new IllegalArgumentException();
+        }
+
         
         try (Connection con = ds.getConnection()) {
             PreparedStatement ps = con.prepareStatement("select * from APP.MISSION WHERE id = ?", Statement.RETURN_GENERATED_KEYS);

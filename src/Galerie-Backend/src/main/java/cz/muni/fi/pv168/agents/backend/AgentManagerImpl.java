@@ -17,6 +17,21 @@ public class AgentManagerImpl implements AgentManager {
         this.ds = ds;
     }
 
+    private void check(Agent agent){
+        if(agent == null){
+            throw new IllegalArgumentException();
+        }
+
+        if(agent.getName() == null || agent.getName().isEmpty() ||
+                agent.getLevel() == null || agent.getLevel().isEmpty() ||
+                agent.getBorn() == null ){
+            throw new IllegalArgumentException();
+        }
+
+
+
+    }
+
     /**
      * creating new agent
      *
@@ -25,6 +40,9 @@ public class AgentManagerImpl implements AgentManager {
      */
     @Override
     public Long create(Agent agent) {
+
+        check(agent);
+
         Connection con = null;
         try {
             con = ds.getConnection();
@@ -61,6 +79,11 @@ public class AgentManagerImpl implements AgentManager {
      */
     @Override
     public Agent findAgentById(Long id) {
+
+        if(id == null || id < 1){
+            throw new IllegalArgumentException();
+        }
+
         List<Agent> agents = new ArrayList<>();
         try (Connection con = ds.getConnection()) {
             PreparedStatement ps = con.prepareStatement("select * from APP.AGENT WHERE id = ?", Statement.RETURN_GENERATED_KEYS);
@@ -90,6 +113,12 @@ public class AgentManagerImpl implements AgentManager {
      */
     @Override
     public void update(Long id, Agent agent) {
+
+        if(id == null || id < 1){
+            throw new IllegalArgumentException();
+        }
+
+        check(agent);
 
         Connection con = null;
         try {
