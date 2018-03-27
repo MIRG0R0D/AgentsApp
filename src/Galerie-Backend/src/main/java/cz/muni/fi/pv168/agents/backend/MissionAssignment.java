@@ -13,12 +13,16 @@ import java.util.Objects;
  * @author xdovgan
  */
 public class MissionAssignment {
-    private final Long id;
+    private Long id; //is a foreign key to mission
     private List <Agent> agents;
 
     public MissionAssignment(Long id, List<Agent> agents) {
         this.id = id;
         this.agents = agents;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     
