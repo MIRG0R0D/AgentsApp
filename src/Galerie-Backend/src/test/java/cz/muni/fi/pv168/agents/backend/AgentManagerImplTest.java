@@ -9,6 +9,7 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.util.List;
 
+import org.apache.derby.jdbc.ClientDataSource;
 import org.junit.*;
 import static org.junit.Assert.*;
 
@@ -26,7 +27,12 @@ public class AgentManagerImplTest {
 
     @Before
     public void setUp() {
-        manager = new AgentManagerImpl();
+        ClientDataSource ds = new ClientDataSource();
+        ds.setServerName("localhost");
+        ds.setPortNumber(1527);
+        ds.setDatabaseName("user-test");
+
+        manager = new AgentManagerImpl(ds);
 
         jamesBond = new AgentBuilder()
                 .name("Bond, James")

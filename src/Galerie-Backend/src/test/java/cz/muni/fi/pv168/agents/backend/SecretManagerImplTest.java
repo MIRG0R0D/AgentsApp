@@ -9,6 +9,7 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.util.List;
 
+import org.apache.derby.jdbc.ClientDataSource;
 import org.junit.*;
 import static org.junit.Assert.*;
 
@@ -24,7 +25,12 @@ public class SecretManagerImplTest {
 
     @Before
     public void setUp() {
-        manager = new SecretManagerImpl();
+        ClientDataSource ds = new ClientDataSource();
+        ds.setServerName("localhost");
+        ds.setPortNumber(1527);
+        ds.setDatabaseName("user-test");
+
+        manager = new SecretManagerImpl(ds);
         
         jamesBond = new AgentBuilder()
                 .name("Bond, James")
@@ -102,8 +108,13 @@ public class SecretManagerImplTest {
      */
     @Test
     public void testFinishTheMission() {
-        
-        MissionManagerImpl missionManager = new MissionManagerImpl();
+        ClientDataSource ds = new ClientDataSource();
+        ds.setServerName("localhost");
+        ds.setPortNumber(1527);
+        ds.setDatabaseName("user-test");
+
+
+        MissionManagerImpl missionManager = new MissionManagerImpl(ds);
         Agent agent = jamesBond;
         Mission mission = infiltrateSPD;
         

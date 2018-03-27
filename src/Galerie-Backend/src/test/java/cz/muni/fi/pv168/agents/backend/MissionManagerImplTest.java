@@ -5,6 +5,7 @@
  */
 package cz.muni.fi.pv168.agents.backend;
 
+import org.apache.derby.jdbc.ClientDataSource;
 import org.hamcrest.CoreMatchers;
 import org.hamcrest.Matchers;
 import org.junit.*;
@@ -31,7 +32,12 @@ public class MissionManagerImplTest {
     @Before
     public void setUp() {
 
-        manager = new MissionManagerImpl();
+        ClientDataSource ds = new ClientDataSource();
+        ds.setServerName("localhost");
+        ds.setPortNumber(1527);
+        ds.setDatabaseName("user-test");
+
+        manager = new MissionManagerImpl(ds);
 
         killTerrorists = new MissionBuilder()
                 .setCodeName("killingspree")
