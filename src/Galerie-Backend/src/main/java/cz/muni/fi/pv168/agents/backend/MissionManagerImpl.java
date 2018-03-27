@@ -23,6 +23,10 @@ public class MissionManagerImpl implements MissionManager {
         this.ds=ds;
     }
 
+    private static check(Mission mis){
+        //todo
+    }
+    
     /**
      * create new mission
      * @param mis params of new mission
