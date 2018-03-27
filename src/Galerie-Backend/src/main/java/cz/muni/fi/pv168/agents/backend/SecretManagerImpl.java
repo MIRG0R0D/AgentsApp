@@ -1,7 +1,5 @@
 package cz.muni.fi.pv168.agents.backend;
 
-import cz.muni.fi.pv168.agents.common.IllegalEntityException;
-import cz.muni.fi.pv168.agents.common.ServiceFailureException;
 
 import javax.sql.DataSource;
 import java.util.List;
