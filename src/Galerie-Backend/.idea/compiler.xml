@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Agents-Backend" />
         <module name="Galerie-Backend" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Agents-Backend" target="1.8" />
       <module name="Galerie-Backend" target="1.8" />
     </bytecodeTargetLevel>
   </component>

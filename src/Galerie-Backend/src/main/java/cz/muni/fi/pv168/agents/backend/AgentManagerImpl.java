@@ -1,9 +1,14 @@
 package cz.muni.fi.pv168.agents.backend;
 
+import javax.sql.DataSource;
 import java.util.List;
 
 
 public class AgentManagerImpl implements AgentManager {
+
+    public AgentManagerImpl(DataSource ds) {
+
+    }
 
     /**
      * creating new agent

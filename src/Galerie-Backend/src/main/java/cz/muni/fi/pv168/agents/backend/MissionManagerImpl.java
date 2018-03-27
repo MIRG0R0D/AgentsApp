@@ -1,9 +1,14 @@
 package cz.muni.fi.pv168.agents.backend;
 
+import javax.sql.DataSource;
 import java.util.List;
 
 
 public class MissionManagerImpl implements MissionManager {
+
+    public MissionManagerImpl(DataSource ds) {
+
+    }
 
     /**
      * create new mission
