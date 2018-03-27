@@ -12,109 +12,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MissionManagerImplTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/MissionManagerImplTest.java">
+      <file leaf-file-name="createTables.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/cz/muni/fi/pv168/galerie/backend/createTables.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="140" column="36" lean-forward="true" selection-start-line="140" selection-start-column="36" selection-end-line="140" selection-end-column="36" />
+            <state relative-caret-position="255">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="Agent.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/Agent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+            <state relative-caret-position="0">
+              <caret line="0" column="40" lean-forward="true" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MAVEN/cz.muni.fi.pv168.galerue:Galerie-Backend:1.0-SNAPSHOT" pinned="false" current-in-tab="false">
-        <entry file="uml://MAVEN/cz.muni.fi.pv168.galerue:Galerie-Backend:1.0-SNAPSHOT">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>MAVEN</ID>
-              <OriginalElement>cz.muni.fi.pv168.galerue:Galerie-Backend:1.0-SNAPSHOT</OriginalElement>
-              <nodes>
-                <node x="0.0" y="111.0">cz.muni.fi.pv168.galerue:Galerie-Backend:1.0-SNAPSHOT</node>
-                <node x="250.5" y="0.0">org.apache.derby:derby:jar:10.12.1.1</node>
-                <node x="255.0" y="74.0">junit:junit:jar:4.12</node>
-                <node x="428.0" y="74.0">junit:junit:jar:4.12/org.hamcrest:hamcrest-core:jar:1.3</node>
-                <node x="230.5" y="148.0">org.assertj:assertj-core:jar:3.3.0</node>
-                <node x="225.0" y="222.0">org.mockito:mockito-core:jar:1.10.19</node>
-                <node x="428.0" y="185.0">org.mockito:mockito-core:jar:1.10.19/org.hamcrest:hamcrest-core:jar:1.1</node>
-                <node x="445.0" y="259.0">org.mockito:mockito-core:jar:1.10.19/org.objenesis:objenesis:jar:2.1</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="org.mockito:mockito-core:jar:1.10.19" target="org.mockito:mockito-core:jar:1.10.19/org.objenesis:objenesis:jar:2.1">
-                  <point x="61.5" y="8.5" />
-                  <point x="428.0" y="276.0" />
-                  <point x="-48.5" y="-0.0" />
-                </edge>
-                <edge source="cz.muni.fi.pv168.galerue:Galerie-Backend:1.0-SNAPSHOT" target="org.mockito:mockito-core:jar:1.10.19">
-                  <point x="72.5" y="12.75" />
-                  <point x="-61.5" y="-0.0" />
-                </edge>
-                <edge source="org.mockito:mockito-core:jar:1.10.19" target="org.mockito:mockito-core:jar:1.10.19/org.hamcrest:hamcrest-core:jar:1.1">
-                  <point x="61.5" y="-8.5" />
-                  <point x="-65.5" y="-0.0" />
-                </edge>
-                <edge source="cz.muni.fi.pv168.galerue:Galerie-Backend:1.0-SNAPSHOT" target="org.apache.derby:derby:jar:10.12.1.1">
-                  <point x="72.5" y="-12.75" />
-                  <point x="225.0" y="17.0" />
-                  <point x="-36.0" y="-0.0" />
-                </edge>
-                <edge source="junit:junit:jar:4.12" target="junit:junit:jar:4.12/org.hamcrest:hamcrest-core:jar:1.3">
-                  <point x="31.5" y="-0.0" />
-                  <point x="-65.5" y="-0.0" />
-                </edge>
-                <edge source="cz.muni.fi.pv168.galerue:Galerie-Backend:1.0-SNAPSHOT" target="junit:junit:jar:4.12">
-                  <point x="72.5" y="-4.25" />
-                  <point x="225.0" y="91.0" />
-                  <point x="-31.5" y="-0.0" />
-                </edge>
-                <edge source="cz.muni.fi.pv168.galerue:Galerie-Backend:1.0-SNAPSHOT" target="org.assertj:assertj-core:jar:3.3.0">
-                  <point x="72.5" y="4.25" />
-                  <point x="-56.0" y="-0.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="-225.0" y="6.5" />
-              <SelectedNodes />
-              <Categories />
-              <VISIBILITY>All</VISIBILITY>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AgentBuilder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/AgentBuilder.java">
+      <file leaf-file-name="Mission.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/Mission.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AgentManagerImplTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/AgentManagerImplTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-213">
-              <caret line="64" column="38" lean-forward="false" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SecretManagerImplTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/SecretManagerImplTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="129" column="47" lean-forward="false" selection-start-line="122" selection-start-column="5" selection-end-line="129" selection-end-column="47" />
+            <state relative-caret-position="119">
+              <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -135,6 +57,7 @@
         <option value="$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/AgentManagerImplTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/MissionManagerImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/cz/muni/fi/pv168/galerie/backend/createTables.sql" />
       </list>
     </option>
   </component>
@@ -152,7 +75,6 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="27" />
     <option name="width" value="1600" />
     <option name="height" value="881" />
   </component>
@@ -171,81 +93,87 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="GraveManager-Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Galerie-Backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="Galerie-Backend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="GraveManager-Backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Galerie-Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GraveManager-Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Galerie-Backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="Galerie-Backend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="GraveManager-Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Galerie-Backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="Galerie-Backend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="GraveManager-Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Galerie-Backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="Galerie-Backend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="agents" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="GraveManager-Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Galerie-Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Galerie-Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Galerie-Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Galerie-Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Galerie-Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Galerie-Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Galerie-Backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="Galerie-Backend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="GraveManager-Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Galerie-Backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="Galerie-Backend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="GraveManager-Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Galerie-Backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="Galerie-Backend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pv168" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GraveManager-Backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Galerie-Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pv168" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/temp/JDBCDemo/pom.xml" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
@@ -266,7 +194,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MissionManagerImplTest.testFindAllMission">
+  <component name="RunManager">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
     <configuration name="MissionManagerImplTest.testFindAllMission" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -292,27 +241,6 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -333,11 +261,17 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Galerie-Backend" />
+      <envs />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -373,6 +307,12 @@
       <properties />
       <listeners />
     </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
     <recent_temporary>
       <list size="1">
         <item index="0" class="java.lang.String" itemvalue="JUnit.MissionManagerImplTest.testFindAllMission" />
@@ -399,35 +339,45 @@
     <option name="totallyTimeSpent" value="3342000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="26" width="1920" height="1174" extended-state="6" />
+    <frame x="0" y="0" width="1600" height="881" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23858342" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.124523506" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22447917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909784" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,93 +391,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/galerie/backend/BodyManagerImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/Agent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="85">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/galerie/backend/CemeteryManagerImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/galerie/backend/GraveBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/galerie/backend/GraveManagerImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/common/DBUtils.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/common/IllegalEntityException.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/common/ValidationException.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/common/ServiceFailureException.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/backend/GalleryManagerImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/backend/Gender.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/galerie/backend/BodyBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/galerie/backend/BodyManagerImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/galerie/backend/CemeteryManagerImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/galerie/backend/GraveBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/galerie/backend/GraveManagerImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/backend/PhotoManagerImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/backend/Photo.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/backend/AlbumManagerImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/backend/AlbumManager.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/backend/Album.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/backend/GalleryManager.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/SecretManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-28">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -551,10 +419,323 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/android-studio2/jre/jre/lib/rt.jar!/java/time/LocalDate.class" />
+    <entry file="jar://$USER_HOME$/android-studio2/jre/jre/lib/rt.jar!/java/time/LocalDate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-53">
+          <caret line="60" column="38" lean-forward="false" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
+          <folding>
+            <marker date="1510218688000" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1510218688000" expanded="false" signature="133:1069" ph="..." />
+            <marker date="1510218688000" expanded="false" signature="1594:1605" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="1643:1649" ph=" }" />
+            <marker date="1510218688000" expanded="false" signature="1695:1706" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="1737:1743" ph=" }" />
+            <marker date="1510218688000" expanded="true" signature="1789:2107" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="2172:2394" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="2457:2684" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="2744:3447" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="3499:4368" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="4426:4784" ph="{...}" />
+            <marker date="1510218688000" expanded="false" signature="4838:4849" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="4902:4908" ph=" }" />
+            <marker date="1510218688000" expanded="true" signature="4987:5106" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="5174:6007" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="6089:6507" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="6561:6660" ph="{...}" />
+            <marker date="1510218688000" expanded="false" signature="6712:6723" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="6754:6760" ph=" }" />
+            <marker date="1510218688000" expanded="false" signature="6811:6822" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="6853:6859" ph=" }" />
+            <marker date="1510218688000" expanded="true" signature="6909:7883" ph="{...}" />
+            <marker date="1510218688000" expanded="false" signature="7923:7934" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="8005:8011" ph=" }" />
+            <marker date="1510218688000" expanded="true" signature="8057:8410" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="8453:9724" ph="{...}" />
+            <marker date="1510218688000" expanded="false" signature="9762:9773" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="9826:9832" ph=" }" />
+            <marker date="1510218688000" expanded="false" signature="9874:9885" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="9915:9921" ph=" }" />
+            <marker date="1510218688000" expanded="false" signature="9946:9957" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="9979:9985" ph=" }" />
+            <marker date="1510218688000" expanded="false" signature="10011:10022" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="10039:10045" ph=" }" />
+            <marker date="1510218688000" expanded="false" signature="10077:10088" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="10106:10112" ph=" }" />
+            <marker date="1510218688000" expanded="false" signature="10141:10152" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="10180:10186" ph=" }" />
+            <marker date="1510218688000" expanded="false" signature="10218:10229" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="10245:10251" ph=" }" />
+            <marker date="1510218688000" expanded="false" signature="10282:10293" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="10365:10371" ph=" }" />
+            <marker date="1510218688000" expanded="true" signature="10409:10522" ph="{...}" />
+            <marker date="1510218688000" expanded="false" signature="10555:10566" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="10624:10630" ph=" }" />
+            <marker date="1510218688000" expanded="true" signature="10663:10982" ph="{...}" />
+            <marker date="1510218688000" expanded="false" signature="11013:11024" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="11061:11067" ph=" }" />
+            <marker date="1510218688000" expanded="true" signature="11118:11220" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="11279:13064" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="13106:13325" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="13368:13596" ph="{...}" />
+            <marker date="1510218688000" expanded="false" signature="13643:13654" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="13719:13725" ph=" }" />
+            <marker date="1510218688000" expanded="false" signature="13771:13782" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="13853:13859" ph=" }" />
+            <marker date="1510218688000" expanded="true" signature="13908:14214" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="14272:15298" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="15342:15580" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="15625:16026" ph="{...}" />
+            <marker date="1510218688000" expanded="false" signature="16069:16080" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="16131:16137" ph=" }" />
+            <marker date="1510218688000" expanded="true" signature="16180:16366" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="16416:16736" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="16795:16928" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="16973:17103" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="17149:17282" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="17327:17457" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="17501:17628" ph="{...}" />
+            <marker date="1510218688000" expanded="false" signature="17675:17686" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="17756:17762" ph=" }" />
+            <marker date="1510218688000" expanded="false" signature="17809:17820" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="17850:17856" ph=" }" />
+            <marker date="1510218688000" expanded="true" signature="17914:18882" ph="{...}" />
+            <marker date="1510218688000" expanded="false" signature="18918:18929" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="18974:18980" ph=" }" />
+            <marker date="1510218688000" expanded="true" signature="19027:19232" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="19280:19859" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="19910:20002" ph="{...}" />
+            <marker date="1510218688000" expanded="false" signature="20051:20062" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="20098:20104" ph=" }" />
+            <marker date="1510218688000" expanded="false" signature="20157:20168" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="20213:20219" ph=" }" />
+            <marker date="1510218688000" expanded="false" signature="20282:20293" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="20344:20350" ph=" }" />
+            <marker date="1510218688000" expanded="true" signature="20424:20497" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="20549:20652" ph="{...}" />
+            <marker date="1510218688000" expanded="false" signature="20693:20704" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="20754:20760" ph=" }" />
+            <marker date="1510218688000" expanded="true" signature="20813:21251" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="21282:21861" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="21910:22018" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="22055:22292" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="22343:22515" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="22567:22740" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="22791:22964" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="23005:23224" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="23252:23418" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="23449:24104" ph="{...}" />
+            <marker date="1510218688000" expanded="false" signature="24139:24150" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="24180:24186" ph=" }" />
+            <marker date="1510218688000" expanded="true" signature="24270:24365" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="24426:24537" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="24608:24761" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/MissionManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/AgentManagerImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="771">
+          <caret line="123" column="1" lean-forward="true" selection-start-line="123" selection-start-column="1" selection-end-line="123" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/MissionManagerImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="55" column="3" lean-forward="true" selection-start-line="55" selection-start-column="3" selection-end-line="64" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/SecretManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/SecretManagerImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="128" column="39" lean-forward="true" selection-start-line="128" selection-start-column="39" selection-end-line="128" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/galerie/backend/BodyManagerImplTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/galerie/backend/CemeteryManagerImplTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/galerie/backend/GraveBuilder.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/galerie/backend/GraveManagerImplTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/common/DBUtils.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/common/IllegalEntityException.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/common/ValidationException.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/common/ServiceFailureException.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/backend/GalleryManagerImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/backend/Gender.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/galerie/backend/BodyBuilder.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/galerie/backend/BodyManagerImplTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/galerie/backend/CemeteryManagerImplTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/galerie/backend/GraveBuilder.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/galerie/backend/GraveManagerImplTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/backend/PhotoManagerImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/backend/Photo.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/backend/AlbumManagerImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/backend/AlbumManager.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/backend/Album.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/backend/GalleryManager.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/SecretManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/MissionBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="32" column="53" lean-forward="false" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/MissionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/android-studio2/jre/jre/lib/rt.jar!/java/time/LocalDate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="60" column="38" lean-forward="false" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
+          <folding>
+            <marker date="1510218688000" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1510218688000" expanded="false" signature="133:1069" ph="..." />
+            <marker date="1510218688000" expanded="false" signature="1594:1605" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="1643:1649" ph=" }" />
+            <marker date="1510218688000" expanded="false" signature="1695:1706" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="1737:1743" ph=" }" />
+            <marker date="1510218688000" expanded="true" signature="1789:2107" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="2172:2394" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="2457:2684" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="2744:3447" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="3499:4368" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="4426:4784" ph="{...}" />
+            <marker date="1510218688000" expanded="false" signature="4838:4849" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="4902:4908" ph=" }" />
+            <marker date="1510218688000" expanded="true" signature="4987:5106" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="5174:6007" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="6089:6507" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="6561:6660" ph="{...}" />
+            <marker date="1510218688000" expanded="false" signature="6712:6723" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="6754:6760" ph=" }" />
+            <marker date="1510218688000" expanded="false" signature="6811:6822" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="6853:6859" ph=" }" />
+            <marker date="1510218688000" expanded="true" signature="6909:7883" ph="{...}" />
+            <marker date="1510218688000" expanded="false" signature="7923:7934" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="8005:8011" ph=" }" />
+            <marker date="1510218688000" expanded="true" signature="8057:8410" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="8453:9724" ph="{...}" />
+            <marker date="1510218688000" expanded="false" signature="9762:9773" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="9826:9832" ph=" }" />
+            <marker date="1510218688000" expanded="false" signature="9874:9885" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="9915:9921" ph=" }" />
+            <marker date="1510218688000" expanded="false" signature="9946:9957" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="9979:9985" ph=" }" />
+            <marker date="1510218688000" expanded="false" signature="10011:10022" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="10039:10045" ph=" }" />
+            <marker date="1510218688000" expanded="false" signature="10077:10088" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="10106:10112" ph=" }" />
+            <marker date="1510218688000" expanded="false" signature="10141:10152" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="10180:10186" ph=" }" />
+            <marker date="1510218688000" expanded="false" signature="10218:10229" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="10245:10251" ph=" }" />
+            <marker date="1510218688000" expanded="false" signature="10282:10293" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="10365:10371" ph=" }" />
+            <marker date="1510218688000" expanded="true" signature="10409:10522" ph="{...}" />
+            <marker date="1510218688000" expanded="false" signature="10555:10566" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="10624:10630" ph=" }" />
+            <marker date="1510218688000" expanded="true" signature="10663:10982" ph="{...}" />
+            <marker date="1510218688000" expanded="false" signature="11013:11024" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="11061:11067" ph=" }" />
+            <marker date="1510218688000" expanded="true" signature="11118:11220" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="11279:13064" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="13106:13325" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="13368:13596" ph="{...}" />
+            <marker date="1510218688000" expanded="false" signature="13643:13654" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="13719:13725" ph=" }" />
+            <marker date="1510218688000" expanded="false" signature="13771:13782" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="13853:13859" ph=" }" />
+            <marker date="1510218688000" expanded="true" signature="13908:14214" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="14272:15298" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="15342:15580" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="15625:16026" ph="{...}" />
+            <marker date="1510218688000" expanded="false" signature="16069:16080" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="16131:16137" ph=" }" />
+            <marker date="1510218688000" expanded="true" signature="16180:16366" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="16416:16736" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="16795:16928" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="16973:17103" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="17149:17282" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="17327:17457" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="17501:17628" ph="{...}" />
+            <marker date="1510218688000" expanded="false" signature="17675:17686" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="17756:17762" ph=" }" />
+            <marker date="1510218688000" expanded="false" signature="17809:17820" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="17850:17856" ph=" }" />
+            <marker date="1510218688000" expanded="true" signature="17914:18882" ph="{...}" />
+            <marker date="1510218688000" expanded="false" signature="18918:18929" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="18974:18980" ph=" }" />
+            <marker date="1510218688000" expanded="true" signature="19027:19232" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="19280:19859" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="19910:20002" ph="{...}" />
+            <marker date="1510218688000" expanded="false" signature="20051:20062" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="20098:20104" ph=" }" />
+            <marker date="1510218688000" expanded="false" signature="20157:20168" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="20213:20219" ph=" }" />
+            <marker date="1510218688000" expanded="false" signature="20282:20293" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="20344:20350" ph=" }" />
+            <marker date="1510218688000" expanded="true" signature="20424:20497" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="20549:20652" ph="{...}" />
+            <marker date="1510218688000" expanded="false" signature="20693:20704" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="20754:20760" ph=" }" />
+            <marker date="1510218688000" expanded="true" signature="20813:21251" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="21282:21861" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="21910:22018" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="22055:22292" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="22343:22515" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="22567:22740" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="22791:22964" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="23005:23224" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="23252:23418" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="23449:24104" ph="{...}" />
+            <marker date="1510218688000" expanded="false" signature="24139:24150" ph=" { " />
+            <marker date="1510218688000" expanded="false" signature="24180:24186" ph=" }" />
+            <marker date="1510218688000" expanded="true" signature="24270:24365" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="24426:24537" ph="{...}" />
+            <marker date="1510218688000" expanded="true" signature="24608:24761" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/MissionManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-17">
@@ -566,97 +747,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/SecretManagerImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="129" column="47" lean-forward="false" selection-start-line="122" selection-start-column="5" selection-end-line="129" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/AgentBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/Agent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/AgentManagerImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-213">
-          <caret line="64" column="38" lean-forward="false" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
+        <state relative-caret-position="1887">
+          <caret line="135" column="1" lean-forward="false" selection-start-line="135" selection-start-column="1" selection-end-line="135" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="uml://MAVEN/cz.muni.fi.pv168.galerue:Galerie-Backend:1.0-SNAPSHOT">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>MAVEN</ID>
-          <OriginalElement>cz.muni.fi.pv168.galerue:Galerie-Backend:1.0-SNAPSHOT</OriginalElement>
-          <nodes>
-            <node x="0.0" y="111.0">cz.muni.fi.pv168.galerue:Galerie-Backend:1.0-SNAPSHOT</node>
-            <node x="250.5" y="0.0">org.apache.derby:derby:jar:10.12.1.1</node>
-            <node x="255.0" y="74.0">junit:junit:jar:4.12</node>
-            <node x="428.0" y="74.0">junit:junit:jar:4.12/org.hamcrest:hamcrest-core:jar:1.3</node>
-            <node x="230.5" y="148.0">org.assertj:assertj-core:jar:3.3.0</node>
-            <node x="225.0" y="222.0">org.mockito:mockito-core:jar:1.10.19</node>
-            <node x="428.0" y="185.0">org.mockito:mockito-core:jar:1.10.19/org.hamcrest:hamcrest-core:jar:1.1</node>
-            <node x="445.0" y="259.0">org.mockito:mockito-core:jar:1.10.19/org.objenesis:objenesis:jar:2.1</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="org.mockito:mockito-core:jar:1.10.19" target="org.mockito:mockito-core:jar:1.10.19/org.objenesis:objenesis:jar:2.1">
-              <point x="61.5" y="8.5" />
-              <point x="428.0" y="276.0" />
-              <point x="-48.5" y="-0.0" />
-            </edge>
-            <edge source="cz.muni.fi.pv168.galerue:Galerie-Backend:1.0-SNAPSHOT" target="org.mockito:mockito-core:jar:1.10.19">
-              <point x="72.5" y="12.75" />
-              <point x="-61.5" y="-0.0" />
-            </edge>
-            <edge source="org.mockito:mockito-core:jar:1.10.19" target="org.mockito:mockito-core:jar:1.10.19/org.hamcrest:hamcrest-core:jar:1.1">
-              <point x="61.5" y="-8.5" />
-              <point x="-65.5" y="-0.0" />
-            </edge>
-            <edge source="cz.muni.fi.pv168.galerue:Galerie-Backend:1.0-SNAPSHOT" target="org.apache.derby:derby:jar:10.12.1.1">
-              <point x="72.5" y="-12.75" />
-              <point x="225.0" y="17.0" />
-              <point x="-36.0" y="-0.0" />
-            </edge>
-            <edge source="junit:junit:jar:4.12" target="junit:junit:jar:4.12/org.hamcrest:hamcrest-core:jar:1.3">
-              <point x="31.5" y="-0.0" />
-              <point x="-65.5" y="-0.0" />
-            </edge>
-            <edge source="cz.muni.fi.pv168.galerue:Galerie-Backend:1.0-SNAPSHOT" target="junit:junit:jar:4.12">
-              <point x="72.5" y="-4.25" />
-              <point x="225.0" y="91.0" />
-              <point x="-31.5" y="-0.0" />
-            </edge>
-            <edge source="cz.muni.fi.pv168.galerue:Galerie-Backend:1.0-SNAPSHOT" target="org.assertj:assertj-core:jar:3.3.0">
-              <point x="72.5" y="4.25" />
-              <point x="-56.0" y="-0.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-225.0" y="6.5" />
-          <SelectedNodes />
-          <Categories />
-          <VISIBILITY>All</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
+    <entry file="uml://MAVEN/cz.muni.fi.pv168.galerue:Galerie-Backend:1.0-SNAPSHOT" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -665,10 +768,90 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/cz/muni/fi/pv168/galerie/backend/dropTables.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/common/DBUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2268">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/common/IllegalEntityException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/common/ServiceFailureException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/common/ValidationException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/MissionManagerImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="140" column="36" lean-forward="true" selection-start-line="140" selection-start-column="36" selection-end-line="140" selection-end-column="36" />
+        <state relative-caret-position="544">
+          <caret line="44" column="3" lean-forward="false" selection-start-line="44" selection-start-column="3" selection-end-line="44" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/SecretManagerImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="104" column="8" lean-forward="false" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/AgentBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/Agent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="40" lean-forward="true" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/Mission.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/cz/muni/fi/pv168/galerie/backend/createTables.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
