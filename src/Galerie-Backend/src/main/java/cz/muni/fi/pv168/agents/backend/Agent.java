@@ -6,8 +6,8 @@ import java.util.Objects;
 
 public class Agent {
 
-    private final Long id;
-    private final LocalDate born;
+    private Long id;
+    private LocalDate born;
     private String level;
     private String name;
 
@@ -16,6 +16,10 @@ public class Agent {
         this.born = born;
         this.level = level;
         this.name = name;
+    }
+
+    public void setId(long id){
+        this.id = id;
     }
 
     public Long getId() {
