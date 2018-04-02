@@ -54,11 +54,11 @@ public class MissionManagerImpl implements MissionManager {
         Connection con = null;
         try {
             con = ds.getConnection();
-            PreparedStatement ps = con.prepareStatement("insert into APP.MISSION(CODENAME, START, END, DESCRIPTION, LOCATION) values (?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
+            PreparedStatement ps = con.prepareStatement("insert into APP.MISSION(CODENAME, START, \"END\", DESCRIPTION, LOCATION) values (?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
             
             ps.setString(1, mis.getCodeName());
             ps.setDate(2, Date.valueOf(mis.getStart()));
-            ps.setDate(3, Date.valueOf(mis.getEnd()));
+            ps.setDate(3, (mis.getEnd()==null)? null : Date.valueOf(mis.getEnd()));
             ps.setString(4, mis.getDescription() );
             ps.setString(5, mis.getLocation() );
             ps.executeUpdate();
@@ -102,8 +102,8 @@ public class MissionManagerImpl implements MissionManager {
         try {
             con = ds.getConnection();
             PreparedStatement ps = con.prepareStatement("UPDATE APP.MISSION\n" +
-                    "SET CODENAME=?, START=?, END=?, DESCRIPTION=?, LOCATION=?\n" +
-                    "WHERE id = ?;", Statement.RETURN_GENERATED_KEYS);
+                    "SET CODENAME=?, START=?, \"END\"=?, DESCRIPTION=?, LOCATION=?\n" +
+                    "WHERE id = ?", Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, mis.getCodeName());
             ps.setDate(2, Date.valueOf(mis.getStart()));
             ps.setDate(3, Date.valueOf(mis.getEnd()));
@@ -144,10 +144,12 @@ public class MissionManagerImpl implements MissionManager {
             ResultSet rs = st.executeQuery("select * from APP.MISSION");
             while (rs.next()) {
                 Long id = rs.getLong(1);
-                String codeName = rs.getString(2);
-                LocalDate start = rs.getDate(3).toLocalDate();
-                LocalDate end = rs.getDate(4).toLocalDate();
-                String description = rs.getString(5);
+                String codeName = rs.getString(5);
+                LocalDate start = rs.getDate(2).toLocalDate();
+                LocalDate end = null;
+                if(rs.getDate(3) != null)
+                    end = rs.getDate(3).toLocalDate();
+                String description = rs.getString(4);
                 String location = rs.getString(6);
                 Mission current = new Mission(id, codeName, start, end, location, description);
                 mis.add(current);
@@ -167,13 +169,15 @@ public class MissionManagerImpl implements MissionManager {
        List<Mission> mis = new ArrayList<>();
         try (Connection con = ds.getConnection()) {
             Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery("select * from APP.MISSION WHERE END IS NULL");
+            ResultSet rs = st.executeQuery("select * from APP.MISSION WHERE \"END\" IS NULL");
             while (rs.next()) {
                 Long id = rs.getLong(1);
-                String codeName = rs.getString(2);
-                LocalDate start = rs.getDate(3).toLocalDate();
-                LocalDate end = rs.getDate(4).toLocalDate();
-                String description = rs.getString(5);
+                String codeName = rs.getString(5);
+                LocalDate start = rs.getDate(2).toLocalDate();
+                LocalDate end = null;
+                if(rs.getDate(3) != null)
+                    end = rs.getDate(3).toLocalDate();
+                String description = rs.getString(4);
                 String location = rs.getString(6);
                 Mission current = new Mission(id, codeName, start, end, location, description);
                 mis.add(current);
@@ -204,10 +208,12 @@ public class MissionManagerImpl implements MissionManager {
 
             while (rs.next()) {
                 id = rs.getLong(1);
-                String codeName = rs.getString(2);
-                LocalDate start = rs.getDate(3).toLocalDate();
-                LocalDate end = rs.getDate(4).toLocalDate();
-                String description = rs.getString(5);
+                String codeName = rs.getString(5);
+                LocalDate start = rs.getDate(2).toLocalDate();
+                LocalDate end = null;
+                if(rs.getDate(3) != null)
+                    end = rs.getDate(3).toLocalDate();
+                String description = rs.getString(4);
                 String location = rs.getString(6);
                 Mission mis = new Mission(id, codeName, start, end, location, description);
                 return mis;

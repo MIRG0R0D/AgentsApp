@@ -10,6 +10,7 @@ import org.hamcrest.CoreMatchers;
 import org.hamcrest.Matchers;
 import org.junit.*;
 
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.List;
@@ -25,6 +26,7 @@ public class MissionManagerImplTest {
     private Mission killTerrorists;
     private Mission infiltrateSPD;
     private Mission badMission;
+    private ClientDataSource ds;
 
     public MissionManagerImplTest() {
     }
@@ -33,26 +35,28 @@ public class MissionManagerImplTest {
     @Before
     public void setUp() {
 
-        ClientDataSource ds = new ClientDataSource();
+        ds = new ClientDataSource();
+        ds.setUser("aa");
         ds.setServerName("localhost");
+        ds.setDatabaseName("myDB");
         ds.setPortNumber(1527);
-        ds.setDatabaseName("user-test");
+
 
         manager = new MissionManagerImpl(ds);
 
         badMission = new MissionBuilder()
                 .setCodeName(null)
                 .setDescription("")
-                .setStart(LocalDate.of(15, Month.NOVEMBER, 2000))
-                .setEnd(LocalDate.of(10, Month.NOVEMBER, 2000))
+                .setStart(LocalDate.of(2000, Month.NOVEMBER, 15))
+                .setEnd(LocalDate.of(2000, Month.NOVEMBER, 10))
                 .setId(null)
                 .setLocation("")
                 .build();
         killTerrorists = new MissionBuilder()
                 .setCodeName("killingspree")
                 .setDescription("Kill them all")
-                .setStart(LocalDate.of(8, Month.NOVEMBER, 2000))
-                .setEnd(LocalDate.of(10, Month.NOVEMBER, 2000))
+                .setStart(LocalDate.of(2000, Month.NOVEMBER, 8))
+                .setEnd(LocalDate.of(2000, Month.NOVEMBER, 10))
                 .setId(null)
                 .setLocation("BRNO")
                 .build();
@@ -60,14 +64,23 @@ public class MissionManagerImplTest {
         infiltrateSPD = new MissionBuilder()
                 .setCodeName("spdfree")
                 .setDescription("Get info about spd organization")
-                .setStart(LocalDate.of(15, Month.MARCH, 2017))
-                .setEnd(LocalDate.of(16, Month.MARCH, 2019))
+                .setStart(LocalDate.of(2015, Month.MARCH, 15))
+                .setEnd(null)
                 .setId(null)
                 .setLocation("PRAHA")
                 .build();
 
     }
 
+
+    @After
+    public void tearDown() {
+        try {
+            ds.getConnection().prepareStatement("DELETE FROM APP.MISSION").execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
     /**
      * Test of create method, of class MissionManagerImpl.
@@ -80,12 +93,12 @@ public class MissionManagerImplTest {
         assertNotNull(spdId);
         assertNotEquals(terroristId, spdId);
     }
-    
+
     @Test(expected = IllegalArgumentException.class)
-    public void testCreateBadMission(){
-        
+    public void testCreateBadMission() {
+
         long bad = manager.createMission(badMission);
-        
+
     }
 
     /**
@@ -98,13 +111,13 @@ public class MissionManagerImplTest {
         assertEquals(manager.getMission(spdId), infiltrateSPD);
 
     }
-    
+
     @Test(expected = IllegalArgumentException.class)
-    public void testFindMissionByNullID(){
+    public void testFindMissionByNullID() {
         Long spdId = manager.createMission(infiltrateSPD);
         manager.getMission(null);
     }
-    
+
 
     /**
      * Test of update method, of class MissionManagerImpl.
@@ -119,16 +132,16 @@ public class MissionManagerImplTest {
         assertEquals(manager.getMission(terroristId).getCodeName(), newCodeName);
     }
 
-    
+
     @Test(expected = IllegalArgumentException.class)
-    public void testUpdateFailure(){
+    public void testUpdateFailure() {
         Long terroristId = manager.createMission(killTerrorists);
         Mission mission = manager.getMission(terroristId);
         String newCodeName = "";
         mission.setCodeName(newCodeName);
         manager.updateMission(terroristId, mission);
     }
-    
+
     /**
      * Test of getUncompletedMissions method, of class MissionManagerImpl.
      */

@@ -24,6 +24,32 @@ public class SecretManagerImpl implements SecretManager {
 
     }
 
+    private void checkMission(Mission mis){
+        if(mis == null){
+            throw new IllegalArgumentException();
+        }
+
+        if(mis.getCodeName() == null || mis.getCodeName().isEmpty()){
+            throw new IllegalArgumentException();
+        }
+
+        if(mis.getStart() == null){
+            throw new IllegalArgumentException();
+        }
+    }
+
+    private void checkAgent(Agent agent){
+        if(agent == null){
+            throw new IllegalArgumentException();
+        }
+
+        if(agent.getName() == null || agent.getName().isEmpty() ||
+                agent.getLevel() == null || agent.getLevel().isEmpty() ||
+                agent.getBorn() == null ){
+            throw new IllegalArgumentException();
+        }
+    }
+
 
     /**
      * finding some mission with the certain agent
@@ -33,7 +59,10 @@ public class SecretManagerImpl implements SecretManager {
     
     // can 1 agent be on several missions?????
     @Override
-    public Mission findMissionWithAgent(Agent agent) {
+    public
+    Mission findMissionWithAgent(Agent agent) {
+
+        checkAgent(agent);
 
         try (Connection con = ds.getConnection()) {
             PreparedStatement ps = con.prepareStatement("select * from APP.MISSION_ASSIGNMENT WHERE AGENT_ID = ?", Statement.RETURN_GENERATED_KEYS);
@@ -60,13 +89,16 @@ public class SecretManagerImpl implements SecretManager {
      */
     @Override
     public List<Agent> findAgentsWithMission(Mission mission) {
+
+        checkMission(mission);
+
         List <Agent> agents = new ArrayList<>();
         try (Connection con = ds.getConnection()) {
             PreparedStatement ps = con.prepareStatement("select * from APP.MISSION_ASSIGNMENT WHERE MISSION_ID = ?", Statement.RETURN_GENERATED_KEYS);
             ps.setLong(1, mission.getId());
             ResultSet rs = ps.executeQuery();
 
-            if  (rs.next()) {
+            while  (rs.next()) {
                 long missionId = rs.getLong(2);
                 long agentId = rs.getLong(3);
 
@@ -87,6 +119,9 @@ public class SecretManagerImpl implements SecretManager {
      */
     @Override
     public void attachAgentToMission(Agent agent, Mission mission) {
+
+        checkMission(mission);
+        checkAgent(agent);
 
         Connection con = null;
         try {
@@ -117,6 +152,8 @@ public class SecretManagerImpl implements SecretManager {
      */
     @Override
     public void finishTheMission(Mission mission) {
+        checkMission(mission);
+
         mission.setEnd(LocalDate.now());
         missionManager.updateMission(mission.getId(), mission);
         

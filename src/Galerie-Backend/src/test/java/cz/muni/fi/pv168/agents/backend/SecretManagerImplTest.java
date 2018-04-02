@@ -5,12 +5,16 @@
  */
 package cz.muni.fi.pv168.agents.backend;
 
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.List;
 
 import org.apache.derby.jdbc.ClientDataSource;
 import org.junit.*;
+
+import javax.sql.DataSource;
+
 import static org.junit.Assert.*;
 
 /**
@@ -20,32 +24,37 @@ import static org.junit.Assert.*;
 public class SecretManagerImplTest {
     private SecretManager manager;
     private MissionManager missionManager;
+    private AgentManager agentManager;
     private Agent jamesBond;
     private Agent vonStierlitz;
     private Agent badAgent;
     private Mission infiltrateSPD;
+    private ClientDataSource ds;
 
     @Before
     public void setUp() {
-        ClientDataSource ds = new ClientDataSource();
+        ds = new ClientDataSource();
+        ds.setUser("aa");
         ds.setServerName("localhost");
+        ds.setDatabaseName("myDB");
         ds.setPortNumber(1527);
-        ds.setDatabaseName("user-test");
+
 
         manager = new SecretManagerImpl(ds);
         missionManager = new MissionManagerImpl(ds);
+        agentManager = new AgentManagerImpl(ds);
         
         badAgent = new Agent(null,null, null, null);
         jamesBond = new AgentBuilder()
                 .name("Bond, James")
-                .born(LocalDate.of(1, Month.JANUARY, 1964))
+                .born(LocalDate.of(1964, Month.JANUARY, 1))
                 .level("00")
                 .id(null)
                 .build();
 
         vonStierlitz = new AgentBuilder()
                 .name("Max Otto vonStierlitz")
-                .born(LocalDate.of(8, Month.OCTOBER, 1900))
+                .born(LocalDate.of(1900, Month.OCTOBER, 8))
                 .level("00")
                 .id(null)
                 .build();
@@ -53,12 +62,23 @@ public class SecretManagerImplTest {
         infiltrateSPD = new MissionBuilder()
                 .setCodeName("spdfree")
                 .setDescription("Get info about spd organization")
-                .setEnd(LocalDate.of(15, Month.MARCH, 2017))
-                .setEnd(LocalDate.of(16, Month.MARCH, 2019))
+                .setStart(LocalDate.of(2017, Month.MARCH, 20))
+                .setEnd(null)
                 .setId(null)
                 .setLocation("PRAHA")
                 .build();
 
+    }
+
+    @After
+    public void tearDown() {
+        try {
+            ds.getConnection().prepareStatement("DELETE FROM APP.MISSION").execute();
+            ds.getConnection().prepareStatement("DELETE FROM APP.AGENT").execute();
+            ds.getConnection().prepareStatement("DELETE FROM APP.MISSION_ASSIGNMENT").execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
       
     /**
@@ -69,6 +89,8 @@ public class SecretManagerImplTest {
         
         Agent agent = jamesBond;
         Mission mission = infiltrateSPD;
+        missionManager.createMission(mission);
+        agentManager.create(agent);
         manager.attachAgentToMission(agent, mission);
         
         assertEquals(manager.findMissionWithAgent(agent), mission);
@@ -97,6 +119,7 @@ public class SecretManagerImplTest {
     public void testAttachNullAgent() {
         
         Mission mission = infiltrateSPD;
+        missionManager.createMission(mission);
         manager.attachAgentToMission(null, mission);
     }
     
@@ -113,7 +136,11 @@ public class SecretManagerImplTest {
         Agent stier = vonStierlitz;
         Agent bond = jamesBond;
         Mission mission = infiltrateSPD;
-        
+
+        agentManager.create(stier);
+        agentManager.create(bond);
+        missionManager.createMission(mission);
+
         manager.attachAgentToMission(stier, mission);
         manager.attachAgentToMission(bond, mission);
         
@@ -135,6 +162,9 @@ public class SecretManagerImplTest {
 
         Agent agent = jamesBond;
         Mission mission = infiltrateSPD;
+
+        agentManager.create(agent);
+        missionManager.createMission(mission);
         
         manager.attachAgentToMission(agent, mission);
         manager.finishTheMission(mission);

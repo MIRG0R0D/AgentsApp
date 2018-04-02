@@ -5,14 +5,18 @@
  */
 package cz.muni.fi.pv168.agents.backend;
 
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.List;
+
 import org.apache.derby.jdbc.ClientDataSource;
+
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.Assert.*;
 
 import org.junit.*;
+
 import static org.junit.Assert.*;
 
 /**
@@ -24,17 +28,20 @@ public class AgentManagerImplTest {
     private Agent jamesBond;
     private Agent vonStierlitz;
     private Agent badAgent;
+    private ClientDataSource ds;
 
     @Before
     public void setUp() {
-        
-        ClientDataSource ds = new ClientDataSource();
+
+        ds = new ClientDataSource();
+        ds.setUser("aa");
         ds.setServerName("localhost");
+        ds.setDatabaseName("myDB");
         ds.setPortNumber(1527);
-        ds.setDatabaseName("user-test");
+
 
         manager = new AgentManagerImpl(ds);
-        
+
 
         jamesBond = new AgentBuilder()
                 .name("Bond, James")
@@ -60,6 +67,15 @@ public class AgentManagerImplTest {
 
     }
 
+    @After
+    public void tearDown() {
+        try {
+            ds.getConnection().prepareStatement("DELETE FROM APP.AGENT").execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     /**
      * Test of create method, of class AgentManagerImpl.
      */
@@ -70,8 +86,6 @@ public class AgentManagerImplTest {
 
         assertNotNull(bondId);
         assertNotNull(stierId);
-
-  
 
         assertNotEquals(bondId, stierId);
 
@@ -161,7 +175,7 @@ public class AgentManagerImplTest {
     public void testBadUpdates() {
         Agent stierlitz = vonStierlitz;
         Long id = manager.create(stierlitz);
-        
+
         stierlitz.setName("");
         stierlitz.setLevel(null);
 

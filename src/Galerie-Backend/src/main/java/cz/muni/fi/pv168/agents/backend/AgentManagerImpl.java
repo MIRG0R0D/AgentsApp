@@ -123,9 +123,9 @@ public class AgentManagerImpl implements AgentManager {
         Connection con = null;
         try {
             con = ds.getConnection();
-            PreparedStatement ps = con.prepareStatement("UPDATE APP.AGENT\n" +
-                    "SET LEVEL = ?, NAME = ? \n" +
-                    "WHERE id = ?;", Statement.RETURN_GENERATED_KEYS);
+            PreparedStatement ps = con.prepareStatement("UPDATE APP.AGENT " +
+                    "SET LEVEL = ?, NAME = ? " +
+                    "WHERE id = ?", Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, agent.getLevel());
             ps.setString(2, agent.getName());
             ps.setLong(3, id);
@@ -161,7 +161,7 @@ public class AgentManagerImpl implements AgentManager {
         List<Agent> agents = new ArrayList<>();
         try (Connection con = ds.getConnection()) {
             Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery("select * from APP.AGENT");
+            ResultSet rs = st.executeQuery("SELECT * FROM APP.AGENT");
             while (rs.next()) {
                 Long id = rs.getLong(1);
                 LocalDate bord = rs.getDate(2).toLocalDate();
@@ -175,5 +175,6 @@ public class AgentManagerImpl implements AgentManager {
         }
         return agents;
     }
+
 
 }
