@@ -26,23 +26,6 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="myDB@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="myDB@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="APP: schema" type="6aa84934:DerbyImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="myDB@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="APP: schema" type="6aa84934:DerbyImplModel$Schema" />
-        <item name="AGENT: table" type="3b012a07:DerbyImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="myDB@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="APP: schema" type="6aa84934:DerbyImplModel$Schema" />
-        <item name="MISSION: table" type="3b012a07:DerbyImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
@@ -51,15 +34,11 @@
       <file leaf-file-name="AgentManagerImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/AgentManagerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="32" column="5" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="32" selection-end-column="5" />
+            <state>
+              <caret line="32" column="5" selection-start-line="19" selection-start-column="3" selection-end-line="32" selection-end-column="5" />
               <folding>
                 <element signature="e#370#371#0" expanded="true" />
                 <element signature="e#398#399#0" expanded="true" />
-                <marker date="1522679893676" expanded="true" signature="1129:1186" ph=" INSERT statement (AGENT)" />
-                <marker date="1522679893676" expanded="true" signature="2544:2580" ph=" SELECT statement (AGENT)" />
-                <marker date="1522679893676" expanded="true" signature="3644:3747" ph=" UPDATE statement (AGENT)" />
-                <marker date="1522679893676" expanded="true" signature="4941:4956" ph=" SELECT statement (AGENT)" />
               </folding>
             </state>
           </provider>
@@ -68,8 +47,8 @@
       <file leaf-file-name="createTables.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/cz/muni/fi/pv168/galerie/backend/createTables.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+            <state relative-caret-position="300">
+              <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -77,17 +56,8 @@
       <file leaf-file-name="SecretManagerImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/SecretManagerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="129" selection-start-line="129" selection-end-line="129" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7971a595-82aa-4535-be82-ca37d1797582/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+            <state relative-caret-position="255">
+              <caret line="157" column="49" lean-forward="true" selection-start-line="157" selection-start-column="49" selection-end-line="157" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -95,8 +65,11 @@
       <file leaf-file-name="MissionManagerImplTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/MissionManagerImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="75" column="3" selection-start-line="75" selection-start-column="3" selection-end-line="82" selection-end-column="5" />
+            <state relative-caret-position="327">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
+              <folding>
+                <marker date="1522681008425" expanded="true" signature="2187:2210" ph=" DELETE statement (MISSION)" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,8 +77,21 @@
       <file leaf-file-name="SecretManagerImplTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/SecretManagerImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="148" selection-start-line="148" selection-end-line="148" />
+            <state relative-caret-position="300">
+              <caret line="107" column="35" selection-start-line="107" selection-start-column="35" selection-end-line="107" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Agent.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/Agent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+              <folding>
+                <element signature="e#431#432#0" expanded="true" />
+                <element signature="e#459#460#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,17 +99,8 @@
       <file leaf-file-name="SecretManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/SecretManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LocalDate.class" pinned="false" current-in-tab="false">
-        <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/time/LocalDate.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
+            <state relative-caret-position="150">
+              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -131,8 +108,8 @@
       <file leaf-file-name="MissionManagerImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/MissionManagerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+            <state relative-caret-position="145">
+              <caret line="199" selection-start-line="199" selection-end-line="199" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -144,7 +121,11 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/Mission.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+              <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+              <folding>
+                <element signature="e#678#679#0" expanded="true" />
+                <element signature="e#706#707#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -304,12 +285,15 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Derby (Embedded)" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/cz/muni/fi/pv168/galerie/backend/createTables.sql" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="cz.muni.fi.pv168.agents.backend" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -324,12 +308,37 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MissionManagerImplTest">
+  <component name="RunManager" selected="JUnit.SecretManagerImplTest">
     <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HEIGHT" value="0" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="WIDTH" value="0" />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="AgentManagerImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Galerie-Backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cz.muni.fi.pv168.agents.backend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="cz.muni.fi.pv168.agents.backend" />
+      <option name="MAIN_CLASS_NAME" value="cz.muni.fi.pv168.agents.backend.AgentManagerImplTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration name="MissionManagerImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Galerie-Backend" />
@@ -367,29 +376,6 @@
       <option name="PACKAGE_NAME" value="cz.muni.fi.pv168.agents.backend" />
       <option name="MAIN_CLASS_NAME" value="cz.muni.fi.pv168.agents.backend.MissionManagerImplTest" />
       <option name="METHOD_NAME" value="testFindAllUncompletedMissions" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="MissionManagerImplTest.testFindMissionById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Galerie-Backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cz.muni.fi.pv168.agents.backend.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="cz.muni.fi.pv168.agents.backend" />
-      <option name="MAIN_CLASS_NAME" value="cz.muni.fi.pv168.agents.backend.MissionManagerImplTest" />
-      <option name="METHOD_NAME" value="testFindMissionById" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -511,18 +497,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.MissionManagerImplTest" />
-      <item itemvalue="JUnit.MissionManagerImplTest.testFindMissionById" />
       <item itemvalue="JUnit.MissionManagerImplTest.testFindAllUncompletedMissions" />
       <item itemvalue="JUnit.SecretManagerImplTest" />
       <item itemvalue="JUnit.SecretManagerImplTest.testFindAgentsWithMission" />
+      <item itemvalue="JUnit.AgentManagerImplTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SecretManagerImplTest" />
+        <item itemvalue="JUnit.AgentManagerImplTest" />
         <item itemvalue="JUnit.MissionManagerImplTest" />
         <item itemvalue="JUnit.SecretManagerImplTest.testFindAgentsWithMission" />
-        <item itemvalue="JUnit.SecretManagerImplTest" />
         <item itemvalue="JUnit.MissionManagerImplTest.testFindAllUncompletedMissions" />
-        <item itemvalue="JUnit.MissionManagerImplTest.testFindMissionById" />
       </list>
     </recent_temporary>
   </component>
@@ -536,44 +522,48 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1520937104350</updated>
-      <workItem from="1522677877792" duration="3948000" />
+      <workItem from="1522677877792" duration="4697000" />
+      <workItem from="1522745792405" duration="65000" />
+      <workItem from="1522753365363" duration="318000" />
+      <workItem from="1522754167106" duration="49000" />
+      <workItem from="1522764173279" duration="533000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MissionManagerImplTest - 2018.04.02 at 17h 00m 06s.xml">
+    <history-entry file="MissionManagerImplTest - 2018.04.02 at 17h 12m 25s.xml">
       <configuration name="MissionManagerImplTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MissionManagerImplTest - 2018.04.02 at 17h 00m 18s.xml">
+    <history-entry file="MissionManagerImplTest - 2018.04.02 at 17h 12m 37s.xml">
       <configuration name="MissionManagerImplTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MissionManagerImplTest - 2018.04.02 at 17h 01m 21s.xml">
+    <history-entry file="AgentManagerImplTest - 2018.04.03 at 16h 04m 07s.xml">
+      <configuration name="AgentManagerImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SecretManagerImplTest - 2018.04.03 at 16h 04m 16s.xml">
+      <configuration name="SecretManagerImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MissionManagerImplTest - 2018.04.03 at 16h 07m 04s.xml">
       <configuration name="MissionManagerImplTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SecretManagerImplTest - 2018.04.02 at 17h 02m 53s.xml">
+    <history-entry file="AgentManagerImplTest - 2018.04.03 at 16h 07m 09s.xml">
+      <configuration name="AgentManagerImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SecretManagerImplTest - 2018.04.03 at 16h 07m 16s.xml">
       <configuration name="SecretManagerImplTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SecretManagerImplTest - 2018.04.02 at 17h 03m 47s.xml">
+    <history-entry file="SecretManagerImplTest - 2018.04.03 at 16h 08m 40s.xml">
       <configuration name="SecretManagerImplTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SecretManagerImplTest - 2018.04.02 at 17h 06m 15s.xml">
+    <history-entry file="SecretManagerImplTest - 2018.04.03 at 16h 10m 54s.xml">
       <configuration name="SecretManagerImplTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SecretManagerImplTest - 2018.04.02 at 17h 07m 13s.xml">
-      <configuration name="SecretManagerImplTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SecretManagerImplTest - 2018.04.02 at 17h 08m 00s.xml">
-      <configuration name="SecretManagerImplTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SecretManagerImplTest - 2018.04.02 at 17h 09m 05s.xml">
-      <configuration name="SecretManagerImplTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SecretManagerImplTest - 2018.04.02 at 17h 09m 56s.xml">
+    <history-entry file="SecretManagerImplTest - 2018.04.03 at 16h 11m 49s.xml">
       <configuration name="SecretManagerImplTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7290000" />
+    <option name="totallyTimeSpent" value="9004000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1600" height="881" extended-state="0" />
@@ -587,16 +577,14 @@
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.3821656" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.34012738" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.12866242" />
       <window_info id="Capture Tool" order="6" />
-      <window_info anchor="bottom" id="Database Console" weight="0.3299363" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.20927319" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.32957393" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32909784" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.22243108" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.19862156" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="5" />
@@ -604,12 +592,14 @@
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="DB Execution Console" order="0" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info id="DB Browser" order="0" weight="0.32957393" />
+      <window_info anchor="bottom" id="Database Console" order="12" weight="0.3299363" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32909784" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="1" />
+      <window_info id="DB Browser" order="0" weight="0.32957393" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -623,18 +613,18 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url />
-          <line>154</line>
+          <line>167</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url />
-          <line>148</line>
+          <line>135</line>
           <properties />
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -661,36 +651,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/android-studio2/jre/jre/lib/rt.jar!/java/time/LocalDate.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="60" column="38" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/android-studio2/jre/jre/lib/rt.jar!/java/time/LocalDate.class" />
     <entry file="uml://MAVEN/cz.muni.fi.pv168.galerue:Galerie-Backend:1.0-SNAPSHOT" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/cz/muni/fi/pv168/galerie/backend/dropTables.sql" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/common/DBUtils.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/common/IllegalEntityException.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/common/ServiceFailureException.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/common/ValidationException.java" />
-    <entry file="file://$PROJECT_DIR$/Galerie-Backend.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$USER_HOME$/android-studio2/jre/jre/lib/rt.jar!/java/sql/PreparedStatement.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="24" column="60" lean-forward="true" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/Agent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/android-studio2/jre/jre/lib/rt.jar!/java/sql/PreparedStatement.class" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
@@ -729,27 +697,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/derby/derbyclient/10.13.1.1/derbyclient-10.13.1.1.jar!/org/apache/derby/jdbc/BasicClientDataSource40.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9255">
-          <caret line="727" selection-start-line="727" selection-end-line="727" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/derby/derbyclient/10.13.1.1/derbyclient-10.13.1.1.jar!/org/apache/derby/jdbc/ClientDataSource.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://7971a595-82aa-4535-be82-ca37d1797582/schema/APP/table/AGENT">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/derby/derbyclient/10.13.1.1/derbyclient-10.13.1.1.jar!/org/apache/derby/jdbc/BasicClientDataSource40.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/derby/derbyclient/10.13.1.1/derbyclient-10.13.1.1.jar!/org/apache/derby/jdbc/ClientDataSource.class" />
+    <entry file="das://7971a595-82aa-4535-be82-ca37d1797582/schema/APP/table/AGENT" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/AgentManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -766,89 +716,98 @@
     </entry>
     <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/time/LocalDate.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
+        <state relative-caret-position="2535">
+          <caret line="206" column="28" selection-start-line="206" selection-start-column="28" selection-end-line="206" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://7971a595-82aa-4535-be82-ca37d1797582/schema/APP/table/MISSION" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/cz/muni/fi/pv168/galerie/backend/createTables.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7971a595-82aa-4535-be82-ca37d1797582/console.sql" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/AgentManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="32" column="5" selection-start-line="19" selection-start-column="3" selection-end-line="32" selection-end-column="5" />
+          <folding>
+            <element signature="e#370#371#0" expanded="true" />
+            <element signature="e#398#399#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/Mission.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://7971a595-82aa-4535-be82-ca37d1797582/schema/APP/table/MISSION">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/cz/muni/fi/pv168/galerie/backend/createTables.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7971a595-82aa-4535-be82-ca37d1797582/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/MissionManagerImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="75" column="3" selection-start-line="75" selection-start-column="3" selection-end-line="82" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/SecretManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+          <folding>
+            <element signature="e#678#679#0" expanded="true" />
+            <element signature="e#706#707#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/MissionManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+        <state relative-caret-position="145">
+          <caret line="199" selection-start-line="199" selection-end-line="199" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/AgentManagerImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/Agent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="32" column="5" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="32" selection-end-column="5" />
+        <state relative-caret-position="285">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
           <folding>
-            <element signature="e#370#371#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
-            <marker date="1522679893676" expanded="true" signature="1129:1186" ph=" INSERT statement (AGENT)" />
-            <marker date="1522679893676" expanded="true" signature="2544:2580" ph=" SELECT statement (AGENT)" />
-            <marker date="1522679893676" expanded="true" signature="3644:3747" ph=" UPDATE statement (AGENT)" />
-            <marker date="1522679893676" expanded="true" signature="4941:4956" ph=" SELECT statement (AGENT)" />
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/SecretManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/time/LocalDate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="668" column="19" selection-start-line="668" selection-start-column="19" selection-end-line="668" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/MissionManagerImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <marker date="1522681008425" expanded="true" signature="2187:2210" ph=" DELETE statement (MISSION)" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/SecretManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="129" selection-start-line="129" selection-end-line="129" />
+        <state relative-caret-position="255">
+          <caret line="157" column="49" lean-forward="true" selection-start-line="157" selection-start-column="49" selection-end-line="157" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/SecretManagerImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="148" selection-start-line="148" selection-end-line="148" />
+        <state relative-caret-position="300">
+          <caret line="107" column="35" selection-start-line="107" selection-start-column="35" selection-end-line="107" selection-end-column="35" />
         </state>
       </provider>
     </entry>

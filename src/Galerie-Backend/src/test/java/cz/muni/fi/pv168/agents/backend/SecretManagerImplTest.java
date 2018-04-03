@@ -104,6 +104,8 @@ public class SecretManagerImplTest {
     public void testAttachAgentToMission() {
         Agent agent = jamesBond;
         Mission mission = infiltrateSPD;
+        missionManager.createMission(mission);
+        agentManager.create(agent);
         manager.attachAgentToMission(agent, mission);
         
     }  
@@ -163,15 +165,18 @@ public class SecretManagerImplTest {
         Agent agent = jamesBond;
         Mission mission = infiltrateSPD;
 
-        agentManager.create(agent);
-        missionManager.createMission(mission);
-        
+        long agentId = agentManager.create(agent);
+        long missionId = missionManager.createMission(mission);
+
+        agent.setId(agentId);
+        mission.setId(missionId);
+
         manager.attachAgentToMission(agent, mission);
         manager.finishTheMission(mission);
+
+        mission = missionManager.getMission(missionId);
         
-        mission = missionManager.getMission(mission.getId());
-        
-        assertTrue(mission.getEnd().isBefore(LocalDate.now()));
+        assertNotNull(mission.getEnd());
     }
     
 }
