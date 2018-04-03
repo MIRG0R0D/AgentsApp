@@ -505,8 +505,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.SecretManagerImplTest" />
-        <item itemvalue="JUnit.AgentManagerImplTest" />
         <item itemvalue="JUnit.MissionManagerImplTest" />
+        <item itemvalue="JUnit.AgentManagerImplTest" />
         <item itemvalue="JUnit.SecretManagerImplTest.testFindAgentsWithMission" />
         <item itemvalue="JUnit.MissionManagerImplTest.testFindAllUncompletedMissions" />
       </list>
