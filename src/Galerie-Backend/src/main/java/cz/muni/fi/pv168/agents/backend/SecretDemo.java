@@ -22,10 +22,24 @@ public class SecretDemo {
         SecretDemo demo = new SecretDemo(ds);
         demo.show();
         agent_demo();
+        //test1();
+        //mis_demo();
     
         
     }
     
+    private static void test1(){
+        Agent agent = new Agent(null, LocalDate.now(), "00", "James Bond");
+        System.out.println(agent.toString());
+        agentManager.create(agent);
+        System.out.println(agent.toString());
+    }
+    
+    private static void mis_demo(){
+        System.out.println("Mission demo \n");
+        System.out.println(missionManager.createMission(new Mission(null,"codename",LocalDate.now(),null,"location","description")));
+        
+    }
     
     private static void agent_demo(){
         System.out.println("Agent demo \n");
@@ -71,7 +85,7 @@ public class SecretDemo {
         System.out.println("Delete all agents");
         try{
             
-            agentManager.deleteAllAgents();
+            //agentManager.deleteAllAgents();
         }catch (Exception e){ e.printStackTrace(); }
         
         System.out.println("Find all agents");
