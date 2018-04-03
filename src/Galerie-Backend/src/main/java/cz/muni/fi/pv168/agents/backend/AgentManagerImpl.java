@@ -43,9 +43,7 @@ public class AgentManagerImpl implements AgentManager {
 
         check(agent);
 
-        Connection con = null;
-        try {
-            con = ds.getConnection();
+        try (Connection con = ds.getConnection()) {
             PreparedStatement ps = con.prepareStatement("insert into APP.AGENT(BORN, LEVEL, NAME) values (?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
             ps.setDate(1, Date.valueOf(agent.getBorn()));
             ps.setString(2, agent.getLevel());
@@ -58,16 +56,7 @@ public class AgentManagerImpl implements AgentManager {
             }
         } catch (SQLException ex) {
             Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, "Error executing insert: ", ex);
-        } finally {
-            if (con != null) {
-                try {
-                    con.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, "Error closing connection: ", ex);
-                }
-            }
-        }
-
+        } 
         return agent.getId();
     }
 
@@ -120,9 +109,8 @@ public class AgentManagerImpl implements AgentManager {
 
         check(agent);
 
-        Connection con = null;
-        try {
-            con = ds.getConnection();
+        try (Connection con = ds.getConnection()){
+            
             PreparedStatement ps = con.prepareStatement("UPDATE APP.AGENT " +
                     "SET LEVEL = ?, NAME = ? " +
                     "WHERE id = ?", Statement.RETURN_GENERATED_KEYS);
@@ -137,15 +125,7 @@ public class AgentManagerImpl implements AgentManager {
             }
         } catch (SQLException ex) {
             Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, "Error executing update: ", ex);
-        } finally {
-            if (con != null) {
-                try {
-                    con.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, "Error closing connection: ", ex);
-                }
-            }
-        }
+        } 
 
     }
 
@@ -174,6 +154,36 @@ public class AgentManagerImpl implements AgentManager {
             Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
         return agents;
+    }
+
+    @Override
+    public void deleteAgentById(Long id) {
+        if(id == null || id < 1){
+            throw new IllegalArgumentException();
+        }
+
+        try (Connection con = ds.getConnection()) {
+            PreparedStatement ps = con.prepareStatement("DELETE from APP.AGENT WHERE id = ?", Statement.RETURN_GENERATED_KEYS);
+            ps.setLong(1, id);
+            ps.executeUpdate();
+
+
+        } catch (SQLException ex) {
+            Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    @Override
+    public void deleteAllAgents() {
+       
+                try (Connection con = ds.getConnection()) {
+            PreparedStatement ps = con.prepareStatement("DELETE from APP.AGENT", Statement.RETURN_GENERATED_KEYS);
+            ps.executeUpdate();
+
+
+        } catch (SQLException ex) {
+            Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
 

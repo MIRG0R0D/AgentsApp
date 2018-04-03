@@ -12,5 +12,10 @@ public interface AgentManager {
     public void update(Long id, Agent agent);
     
     public List<Agent> findAllAgents();
+    
+    public void deleteAgentById (Long id);
+    
+    public void deleteAllAgents();
+    
 
 }

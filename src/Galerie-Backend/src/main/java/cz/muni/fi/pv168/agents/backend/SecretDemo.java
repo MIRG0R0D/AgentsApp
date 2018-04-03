@@ -18,12 +18,14 @@ public class SecretDemo {
         ClientDataSource ds = new ClientDataSource();
         ds.setServerName("localhost");
         ds.setPortNumber(1527);
-        ds.setDatabaseName("user-test");
+        ds.setDatabaseName("myDB");
         SecretDemo demo = new SecretDemo(ds);
         demo.show();
         agent_demo();
+    
         
     }
+    
     
     private static void agent_demo(){
         System.out.println("Agent demo \n");
@@ -33,6 +35,12 @@ public class SecretDemo {
             jamesID=agentManager.create(new Agent(Long.MIN_VALUE, LocalDate.now(), "00", "James Bond"));
             tomID=agentManager.create(new Agent(Long.MIN_VALUE, LocalDate.now(), "15", "Tom Ford"));
             chuckID=agentManager.create(new Agent(Long.MIN_VALUE, LocalDate.now(), "15", "Chuck Norris"));
+        }catch (Exception e){ e.printStackTrace(); }
+        
+        System.out.println("Find all agents");
+        try{
+            for (Agent ag : agentManager.findAllAgents())
+                System.out.println(ag.toString());
         }catch (Exception e){ e.printStackTrace(); }
         
         System.out.println("Finding  agents by id");
@@ -45,6 +53,25 @@ public class SecretDemo {
             System.out.println(agentManager.findAgentById(jamesID).toString());
             agentManager.update(jamesID, new Agent(Long.MIN_VALUE, LocalDate.now(), "00", "Bond, James Bond"));
             System.out.println(agentManager.findAgentById(jamesID).toString());
+        }catch (Exception e){ e.printStackTrace(); }
+        
+        System.out.println("Delete agents");
+        try{
+            
+            agentManager.deleteAgentById(jamesID);
+            System.out.println("delete James - OK");
+        }catch (Exception e){ e.printStackTrace(); }
+        
+        System.out.println("Find all agents");
+        try{
+            for (Agent ag : agentManager.findAllAgents())
+                System.out.println(ag.toString());
+        }catch (Exception e){ e.printStackTrace(); }
+        
+        System.out.println("Delete all agents");
+        try{
+            
+            agentManager.deleteAllAgents();
         }catch (Exception e){ e.printStackTrace(); }
         
         System.out.println("Find all agents");
