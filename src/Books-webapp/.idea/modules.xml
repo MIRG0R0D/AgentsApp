@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/agents-backend/agents-backend.iml" filepath="$PROJECT_DIR$/agents-backend/agents-backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/books-app.iml" filepath="$PROJECT_DIR$/books-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/books-web/books-web.iml" filepath="$PROJECT_DIR$/books-web/books-web.iml" />
+    </modules>
+  </component>
+</project>

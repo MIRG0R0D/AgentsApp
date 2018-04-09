@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d78464be-341c-40df-aa15-731fb9ab9db5" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="myDB@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="myDB@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="APP: schema" type="6aa84934:DerbyImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="myDB@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="APP: schema" type="6aa84934:DerbyImplModel$Schema" />
+        <item name="AGENT: table" type="3b012a07:DerbyImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="myDB@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="APP: schema" type="6aa84934:DerbyImplModel$Schema" />
+        <item name="MISSION: table" type="3b012a07:DerbyImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="AgentManagerImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/AgentManagerImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="32" column="5" selection-start-line="19" selection-start-column="3" selection-end-line="32" selection-end-column="5" />
+              <folding>
+                <element signature="e#370#371#0" expanded="true" />
+                <element signature="e#398#399#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createTables.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/cz/muni/fi/pv168/galerie/backend/createTables.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SecretManagerImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/SecretManagerImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1905">
+              <caret line="134" column="17" selection-start-line="134" selection-start-column="17" selection-end-line="134" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MissionManagerImplTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/MissionManagerImplTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+              <folding>
+                <marker date="1522681008425" expanded="true" signature="2187:2210" ph=" DELETE statement (MISSION)" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SecretManagerImplTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/SecretManagerImplTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2430">
+              <caret line="176" column="1" selection-start-line="176" selection-start-column="1" selection-end-line="176" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SecretManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/SecretManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LocalDate.class" pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/time/LocalDate.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3090">
+              <caret line="206" column="28" selection-start-line="206" selection-start-column="28" selection-end-line="206" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MissionManagerImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/MissionManagerImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mission.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/Mission.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>APP.</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/MissionBuilder.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/SecretDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/Agent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/DataSource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/AgentManager.java" />
+        <option value="$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/AgentManagerImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/AgentManagerImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/MissionManagerImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/MissionManagerImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/cz/muni/fi/pv168/galerie/backend/createTables.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7971a595-82aa-4535-be82-ca37d1797582/console.sql" />
+        <option value="$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/SecretManagerImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/SecretManagerImpl.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="800" />
+    <option name="width" value="800" />
+    <option name="height" value="881" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>Numeric issuesJava</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Galerie-Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Galerie-Backend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Galerie-Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Galerie-Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Galerie-Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Galerie-Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Galerie-Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Galerie-Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Galerie-Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Galerie-Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Galerie-Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Galerie-Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Galerie-Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Galerie-Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Galerie-Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Galerie-Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Galerie-Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Galerie-Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Galerie-Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Galerie-Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Derby (Embedded)" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cz.muni.fi.pv168.agents.backend" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.MissionManagerImplTest">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HEIGHT" value="0" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="WIDTH" value="0" />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="MissionManagerImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Galerie-Backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cz.muni.fi.pv168.agents.backend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="cz.muni.fi.pv168.agents.backend" />
+      <option name="MAIN_CLASS_NAME" value="cz.muni.fi.pv168.agents.backend.MissionManagerImplTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="MissionManagerImplTest.testFindAllUncompletedMissions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Galerie-Backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cz.muni.fi.pv168.agents.backend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="cz.muni.fi.pv168.agents.backend" />
+      <option name="MAIN_CLASS_NAME" value="cz.muni.fi.pv168.agents.backend.MissionManagerImplTest" />
+      <option name="METHOD_NAME" value="testFindAllUncompletedMissions" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="MissionManagerImplTest.testFindMissionById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Galerie-Backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cz.muni.fi.pv168.agents.backend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="cz.muni.fi.pv168.agents.backend" />
+      <option name="MAIN_CLASS_NAME" value="cz.muni.fi.pv168.agents.backend.MissionManagerImplTest" />
+      <option name="METHOD_NAME" value="testFindMissionById" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="SecretManagerImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Galerie-Backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cz.muni.fi.pv168.agents.backend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="cz.muni.fi.pv168.agents.backend" />
+      <option name="MAIN_CLASS_NAME" value="cz.muni.fi.pv168.agents.backend.SecretManagerImplTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="SecretManagerImplTest.testFindAgentsWithMission" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Galerie-Backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cz.muni.fi.pv168.agents.backend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="cz.muni.fi.pv168.agents.backend" />
+      <option name="MAIN_CLASS_NAME" value="cz.muni.fi.pv168.agents.backend.SecretManagerImplTest" />
+      <option name="METHOD_NAME" value="testFindAgentsWithMission" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Galerie-Backend" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.MissionManagerImplTest" />
+      <item itemvalue="JUnit.MissionManagerImplTest.testFindMissionById" />
+      <item itemvalue="JUnit.MissionManagerImplTest.testFindAllUncompletedMissions" />
+      <item itemvalue="JUnit.SecretManagerImplTest" />
+      <item itemvalue="JUnit.SecretManagerImplTest.testFindAgentsWithMission" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MissionManagerImplTest" />
+        <item itemvalue="JUnit.SecretManagerImplTest.testFindAgentsWithMission" />
+        <item itemvalue="JUnit.SecretManagerImplTest" />
+        <item itemvalue="JUnit.MissionManagerImplTest.testFindAllUncompletedMissions" />
+        <item itemvalue="JUnit.MissionManagerImplTest.testFindMissionById" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d78464be-341c-40df-aa15-731fb9ab9db5" name="Default" comment="" />
+      <created>1520937104350</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1520937104350</updated>
+      <workItem from="1522677877792" duration="4697000" />
+      <workItem from="1522745792405" duration="65000" />
+      <workItem from="1522753365363" duration="318000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="SecretManagerImplTest - 2018.04.02 at 17h 02m 53s.xml">
+      <configuration name="SecretManagerImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SecretManagerImplTest - 2018.04.02 at 17h 03m 47s.xml">
+      <configuration name="SecretManagerImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SecretManagerImplTest - 2018.04.02 at 17h 06m 15s.xml">
+      <configuration name="SecretManagerImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SecretManagerImplTest - 2018.04.02 at 17h 07m 13s.xml">
+      <configuration name="SecretManagerImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SecretManagerImplTest - 2018.04.02 at 17h 08m 00s.xml">
+      <configuration name="SecretManagerImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SecretManagerImplTest - 2018.04.02 at 17h 09m 05s.xml">
+      <configuration name="SecretManagerImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SecretManagerImplTest - 2018.04.02 at 17h 09m 56s.xml">
+      <configuration name="SecretManagerImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SecretManagerImplTest_testFindAgentsWithMission - 2018.04.02 at 17h 12m 03s.xml">
+      <configuration name="SecretManagerImplTest.testFindAgentsWithMission" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MissionManagerImplTest - 2018.04.02 at 17h 12m 25s.xml">
+      <configuration name="MissionManagerImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MissionManagerImplTest - 2018.04.02 at 17h 12m 37s.xml">
+      <configuration name="MissionManagerImplTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="8422000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="800" y="0" width="800" height="881" extended-state="0" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info id="Image Layers" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.3821656" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3388535" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Designer" order="3" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.5138191" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.32914573" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="DB Execution Console" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Database Console" order="12" weight="0.3299363" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32909784" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32909784" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info id="DB Browser" order="0" weight="0.32957393" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/MissionManagerImplTest.java</url>
+          <line>167</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/SecretManagerImpl.java</url>
+          <line>135</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="4" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/MissionManagerImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="20" column="15" lean-forward="true" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/common/IllegalEntityException.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/common/ValidationException.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/common/ServiceFailureException.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/backend/GalleryManagerImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/backend/Gender.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/galerie/backend/BodyBuilder.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/galerie/backend/BodyManagerImplTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/galerie/backend/CemeteryManagerImplTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/galerie/backend/GraveBuilder.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/galerie/backend/GraveManagerImplTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/backend/PhotoManagerImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/backend/Photo.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/backend/AlbumManagerImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/backend/AlbumManager.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/backend/Album.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/galerie/backend/GalleryManager.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/MissionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/android-studio2/jre/jre/lib/rt.jar!/java/time/LocalDate.class" />
+    <entry file="uml://MAVEN/cz.muni.fi.pv168.galerue:Galerie-Backend:1.0-SNAPSHOT" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/cz/muni/fi/pv168/galerie/backend/dropTables.sql" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/common/DBUtils.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/common/IllegalEntityException.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/common/ServiceFailureException.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/common/ValidationException.java" />
+    <entry file="jar://$USER_HOME$/android-studio2/jre/jre/lib/rt.jar!/java/sql/PreparedStatement.class" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/Agent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Agents-Backend.iml" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/AgentBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/DataSource.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/DSource.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/MissionBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="32" column="53" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/MissionAssignment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/SecretDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/derby/derbyclient/10.13.1.1/derbyclient-10.13.1.1.jar!/org/apache/derby/jdbc/BasicClientDataSource40.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/derby/derbyclient/10.13.1.1/derbyclient-10.13.1.1.jar!/org/apache/derby/jdbc/ClientDataSource.class" />
+    <entry file="das://7971a595-82aa-4535-be82-ca37d1797582/schema/APP/table/AGENT" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/AgentManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/AgentManagerImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="35" column="8" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/time/LocalDate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3090">
+          <caret line="206" column="28" selection-start-line="206" selection-start-column="28" selection-end-line="206" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/Mission.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://7971a595-82aa-4535-be82-ca37d1797582/schema/APP/table/MISSION" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/cz/muni/fi/pv168/galerie/backend/createTables.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7971a595-82aa-4535-be82-ca37d1797582/console.sql" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/MissionManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/AgentManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="32" column="5" selection-start-line="19" selection-start-column="3" selection-end-line="32" selection-end-column="5" />
+          <folding>
+            <element signature="e#370#371#0" expanded="true" />
+            <element signature="e#398#399#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/SecretManagerImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2430">
+          <caret line="176" column="1" selection-start-line="176" selection-start-column="1" selection-end-line="176" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/SecretManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/muni/fi/pv168/agents/backend/SecretManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1905">
+          <caret line="134" column="17" selection-start-line="134" selection-start-column="17" selection-end-line="134" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/muni/fi/pv168/agents/backend/MissionManagerImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+          <folding>
+            <marker date="1522681008425" expanded="true" signature="2187:2210" ph=" DELETE statement (MISSION)" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
