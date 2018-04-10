@@ -11,51 +11,51 @@ import java.util.logging.Logger;
 
 public class MissionManagerImpl implements MissionManager {
 
-    
+
     private DataSource ds = null;
 
     public MissionManagerImpl(DataSource ds) {
 
-        this.ds=ds;
+        this.ds = ds;
     }
 
-    private void check(Mission mis){
-        if(mis == null){
+    private void check(Mission mis) {
+        if (mis == null) {
             throw new IllegalArgumentException();
         }
 
-        if(mis.getCodeName() == null || mis.getCodeName().isEmpty()){
+        if (mis.getCodeName() == null || mis.getCodeName().isEmpty()) {
             throw new IllegalArgumentException();
         }
 
-        if(mis.getStart() == null){
+        if (mis.getStart() == null) {
             throw new IllegalArgumentException();
         }
-
 
 
     }
-    
+
     /**
      * create new mission
+     *
      * @param mis params of new mission
      * @return id of new mission
      */
     @Override
     public Long createMission(Mission mis) {
-        
+
         check(mis);
-        
+
         Connection con = null;
         try {
             con = ds.getConnection();
             PreparedStatement ps = con.prepareStatement("insert into APP.MISSION(CODENAME, START, \"END\", DESCRIPTION, LOCATION) values (?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
-            
+
             ps.setString(1, mis.getCodeName());
             ps.setDate(2, Date.valueOf(mis.getStart()));
-            ps.setDate(3, (mis.getEnd()==null)? null : Date.valueOf(mis.getEnd()));
-            ps.setString(4, mis.getDescription() );
-            ps.setString(5, mis.getLocation() );
+            ps.setDate(3, (mis.getEnd() == null) ? null : Date.valueOf(mis.getEnd()));
+            ps.setString(4, mis.getDescription());
+            ps.setString(5, mis.getLocation());
             ps.executeUpdate();
             ResultSet keys = ps.getGeneratedKeys();
             if (keys.next()) {
@@ -74,20 +74,21 @@ public class MissionManagerImpl implements MissionManager {
             }
         }
 
-        
+
         return mis.getId();
     }
-    
+
 
     /**
      * update existing mission
-     * @param id id of the mission
+     *
+     * @param id  id of the mission
      * @param mis new params
      */
     @Override
     public void updateMission(Long id, Mission mis) {
 
-        if(id == null || id < 1){
+        if (id == null || id < 1) {
             throw new IllegalArgumentException();
         }
 
@@ -102,8 +103,8 @@ public class MissionManagerImpl implements MissionManager {
             ps.setString(1, mis.getCodeName());
             ps.setDate(2, Date.valueOf(mis.getStart()));
             ps.setDate(3, Date.valueOf(mis.getEnd()));
-            ps.setString(4, mis.getDescription() );
-            ps.setString(5, mis.getLocation() );
+            ps.setString(4, mis.getDescription());
+            ps.setString(5, mis.getLocation());
             ps.setLong(6, id);
             ps.executeUpdate();
             ResultSet keys = ps.getGeneratedKeys();
@@ -123,12 +124,12 @@ public class MissionManagerImpl implements MissionManager {
             }
         }
 
-        
-        
+
     }
 
     /**
      * get all missions
+     *
      * @return list of missions
      */
     @Override
@@ -142,7 +143,7 @@ public class MissionManagerImpl implements MissionManager {
                 String codeName = rs.getString(5);
                 LocalDate start = rs.getDate(2).toLocalDate();
                 LocalDate end = null;
-                if(rs.getDate(3) != null)
+                if (rs.getDate(3) != null)
                     end = rs.getDate(3).toLocalDate();
                 String description = rs.getString(4);
                 String location = rs.getString(6);
@@ -157,11 +158,12 @@ public class MissionManagerImpl implements MissionManager {
 
     /**
      * get all uncompleted missions
+     *
      * @return list of missions
      */
     @Override
     public List<Mission> getUncompletedMissions() {
-       List<Mission> mis = new ArrayList<>();
+        List<Mission> mis = new ArrayList<>();
         try (Connection con = ds.getConnection()) {
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery("select * from APP.MISSION WHERE \"END\" IS NULL");
@@ -170,7 +172,7 @@ public class MissionManagerImpl implements MissionManager {
                 String codeName = rs.getString(5);
                 LocalDate start = rs.getDate(2).toLocalDate();
                 LocalDate end = null;
-                if(rs.getDate(3) != null)
+                if (rs.getDate(3) != null)
                     end = rs.getDate(3).toLocalDate();
                 String description = rs.getString(4);
                 String location = rs.getString(6);
@@ -185,17 +187,18 @@ public class MissionManagerImpl implements MissionManager {
 
     /**
      * get certain mission by it's id
+     *
      * @param id id of the mission
      * @return mission with the same id
      */
     @Override
     public Mission getMission(Long id) {
 
-        if(id == null || id < 1){
+        if (id == null || id < 1) {
             throw new IllegalArgumentException();
         }
 
-        
+
         try (Connection con = ds.getConnection()) {
             PreparedStatement ps = con.prepareStatement("select * from APP.MISSION WHERE id = ?", Statement.RETURN_GENERATED_KEYS);
             ps.setLong(1, id);
@@ -206,7 +209,7 @@ public class MissionManagerImpl implements MissionManager {
                 String codeName = rs.getString(5);
                 LocalDate start = rs.getDate(2).toLocalDate();
                 LocalDate end = null;
-                if(rs.getDate(3) != null)
+                if (rs.getDate(3) != null)
                     end = rs.getDate(3).toLocalDate();
                 String description = rs.getString(4);
                 String location = rs.getString(6);
@@ -220,4 +223,23 @@ public class MissionManagerImpl implements MissionManager {
         return null;
     }
 
+    @Override
+    public void deleteMission(Long id) {
+
+        if (id == null || id < 1) {
+            throw new IllegalArgumentException();
+        }
+
+        try (Connection con = ds.getConnection()) {
+            PreparedStatement ps = con.prepareStatement("DELETE from APP.MISSION WHERE id = ?", Statement.RETURN_GENERATED_KEYS);
+            ps.setLong(1, id);
+            ps.executeUpdate();
+
+
+        } catch (SQLException ex) {
+            Logger.getLogger(AgentManagerImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }
+
+

@@ -15,4 +15,6 @@ public interface MissionManager {
     List <Mission> getUncompletedMissions();
     
     Mission getMission(Long id);
+
+    void deleteMission(Long longId);
 }

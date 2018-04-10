@@ -29,7 +29,7 @@ public class AgentsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //log.debug("GET ...");
-        showAgentsList(request, response);
+        showMissionsList(request, response);
     }
 
     @Override
@@ -125,7 +125,7 @@ public class AgentsServlet extends HttpServlet {
     /**
      * Stores the list of agents to request attribute "agents" and forwards to the JSP to display it.
      */
-    private void showAgentsList(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private void showMissionsList(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             //log.debug("showing table of agents");
             request.setAttribute("agents", getAgentManager().findAllAgents());
