@@ -1,6 +1,8 @@
 # Evidence tajných agentů a jejich misí
 # Secret agents and their missions
 
+**Simple Manager project. JDBC + JUnit + Web Interface**
+
 **Specifications**
  + Manager should create missions and update mission’s info.
  + Manager should create agents and update agent’s info.
